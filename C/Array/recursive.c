@@ -1,17 +1,23 @@
 #include <stdio.h>
 
+int fact(int N);
+
 int main() {
     
        int number;
-       int fact=1;
-    
+       int result;
+
        scanf("%d", &number);
     
-       for(int i=number;i>0;i--)
-       {
-           fact=fact*i;
-       }
-    
-       printf("%d", fact);
+       result=fact(number);
+       printf("Factorial of %d = %d",number, result);
+       
        return 0;
+}
+
+int fact(int N) {
+        
+        if(N>0) return (N*fact(N-1));
+        
+        return 1;
 }
