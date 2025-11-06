@@ -17,8 +17,11 @@ int main() {
     
     total_min=cur_hour*mod_min+cur_min+operating_min;
     
-    end_hour=total_min/mod_min;
-    if(end_hour> 23) end_hour-mod_hour;
+    end_hour=(total_min/mod_min)%mod_min;
+    //printf("%d: ", end_hour);
+    
+    if(end_hour>=24) end_hour-=mod_hour;
+    
     end_min=total_min%mod_min;
     
     printf("%d %d", end_hour, end_min);
