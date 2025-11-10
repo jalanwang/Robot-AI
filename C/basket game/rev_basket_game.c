@@ -51,7 +51,7 @@ int main()
         // printf("\n");
     }
 
-    for(int i=0;i<N;i++) printf("%2d", r_basket[i]);
+    for(int i=0;i<N;i++) printf("%d", r_basket[i]);
     
     return 0;
 }
