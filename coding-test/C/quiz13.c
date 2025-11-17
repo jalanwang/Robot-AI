@@ -11,31 +11,51 @@ int main()
     srand((unsigned int)time(NULL));
      
     int hit;
-    int lotto_ball=45;
+    const int lotto_ball=45;
     int lucky[7]; //7개의 볼이 필요
-    int history[7]; //발견된 볼 저장 어레이
-    int throw=0;
-
+    int history=0; //중복이 발견되면 1로 셋팅
+    int small;
     hit=rand()%45 +1;
+    int ordered_lucky[6];
+
     lucky[0]=hit;
-    history[0]=lucky[0];
 
     for(int i=1;i<7;i++) {
-        hit=rand()%45 +1;
+        hit=rand()%lotto_ball +1;
+
         for(int j=0;j<i;j++) {            
-            if(lucky[i]==history[j]) throw=1;
-        }
-        if(throw==1) {
-            i--;
-            break;
+            if(hit==lucky[j]) {
+                history=1;
+                break;
+            }            
         }
         
-        lucky[i]=hit;
-        history[i]=lucky[i];
+        if(history==1) {
+            i--;
+            history=0;            
+        }
+        
+        else {
+            lucky[i]=hit;
+        }      
     }
     
+    small=lucky[0];
+
+    for(int i=0;i<5;i++) { //올림차순정렬
+        for(int j=0;j<5;j++) {
+            if(lucky[j]>lucky[j+1]) {
+                small=lucky[j];
+                lucky[j]=lucky[j+1];
+                lucky[j+1]=small;
+            }
+
+        }      
+         
+    }
     printf("로또 번호 :");
     for(int i=0;i<6;i++)    printf("%d ", lucky[i]);
+
     printf("\n");
     printf("보너스 번호: %d", lucky[6]);
     
