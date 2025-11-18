@@ -22,8 +22,9 @@ int main()
 
         printf("메뉴: ");
         scanf("%d", &sel);           
-        
-        switch(sel) {
+        select=sel;
+
+        switch(select) {
             case insert:
             break;
 
