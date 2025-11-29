@@ -24,27 +24,27 @@ code[idx]가 "1"이면 mode를 1에서 0으로 바꿉니다.
 // 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
 char* solution(const char* code) {
     // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
-    int size=(sizeof(code)+1)*sizeof(char);
+    int size=strlen(code)+1;
     char* answer = (char*)malloc(size);
-    char* temp;
+    
     int mode=0;
     
     for(int i=0;i<size;i++) {
-        if(mode) {
-            if(code[i]!=1) {
-                if(i%2!=0) temp[i]=code[i];                
+        if(mode) { //mode=1 일 때,
+            if(code[i]!=1) { //1이 아니면 
+                if(i%2!=0) answer[i]=code[i]; //홀수일때만 문자를 복사한다.
             }
-            else mode=0;
+            else mode=0; //코드가 1이면 모드를 0으로 전환한다.
         }
-        else {
-            if(code[i]!=1) {
-                if(i%2==0) temp[i]=code[i];
+        else { //mode=0 일 때,
+            if(code[i]!=1) { //1이 아니면
+                if(i%2==0) answer[i]=code[i]; //짝수일때만 문자를 복사한다.
             }
-            else mode=1;
+            else mode=1; //코드가 0이면 모드를 1로 전환한다.
 
         }    
     }
-    temp[size]='\0';
+    answer[size]='\0';
 
     return answer;
 }
