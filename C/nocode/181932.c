@@ -32,7 +32,7 @@ char* solution(const char* code) {
     for(int i=0;i<size-1;i++) {
         if(mode) { //mode=1 일 때,
             if(code[i]!='1') { //1이 아니면 
-                if(code[i]!='0' && i%2!=0) {
+                if(i%2!=0) {
                     answer[j]=code[i]; //홀수일때와 만 문자를 복사한다. 단, 숫자는 출력하지 않는다.
                     j++;
                 }
@@ -41,7 +41,7 @@ char* solution(const char* code) {
         }
         else { //mode=0 일 때,
             if(code[i]!='1') { //1이 아니면
-                if(code[i]!='0' && i%2==0) {
+                if(i%2==0) {
                     answer[j]=code[i]; //짝수일때만 문자를 복사한다. 단, 숫자는 출력하지 않는다.
                     j++;
                 }
@@ -51,7 +51,10 @@ char* solution(const char* code) {
         }           
 
     }
-    if(j==0)strcpy(answer, "EMPTY");
+    if(j==0) {
+        free(answer);        
+        return strdup("EMPTY");
+    }
 
     answer[j]='\0';
    
