@@ -28,24 +28,34 @@ char* solution(const char* code) {
     char* answer = (char*)malloc(size);
     
     int mode=0;
-    
-    for(int i=0;i<size;i++) {
+    int j=0;
+    for(int i=0;i<size-1;i++) {
         if(mode) { //mode=1 일 때,
-            if(code[i]!=1) { //1이 아니면 
-                if(i%2!=0) answer[i]=code[i]; //홀수일때만 문자를 복사한다.
+            if(code[i]!='1') { //1이 아니면 
+                if(code[i]!='0' && i%2!=0) {
+                    answer[j]=code[i]; //홀수일때와 만 문자를 복사한다. 단, 숫자는 출력하지 않는다.
+                    j++;
+                }
             }
             else mode=0; //코드가 1이면 모드를 0으로 전환한다.
         }
         else { //mode=0 일 때,
-            if(code[i]!=1) { //1이 아니면
-                if(i%2==0) answer[i]=code[i]; //짝수일때만 문자를 복사한다.
+            if(code[i]!='1') { //1이 아니면
+                if(code[i]!='0' && i%2==0) {
+                    answer[j]=code[i]; //짝수일때만 문자를 복사한다. 단, 숫자는 출력하지 않는다.
+                    j++;
+                }
             }
-            else mode=1; //코드가 0이면 모드를 1로 전환한다.
+            else mode=1; //코드가 1이면 모드를 1로 전환한다.
 
-        }    
+        }           
+
     }
-    answer[size]='\0';
+    if(j==0)strcpy(answer, "EMPTY");
 
+    answer[j]='\0';
+   
+    
     return answer;
 }
 
@@ -54,6 +64,7 @@ int main() {
     char* str="abc1abc1abc";
     char* sol=solution(str);
     printf("%s\n",sol);
-    
+
+    free(sol);
     return 0;
 }
