@@ -8,7 +8,7 @@ class Account {
  private: 
   int mId; //계좌번호
   std::string mName; //예금주이름
-  int mBalance; //잔액
+  int mBalance=0; //잔액
 
  public:
   Account(){}
@@ -16,7 +16,7 @@ class Account {
 
   Account(int id, const std::string& name, int initalBalance) {
     this->mId=id;
-    this->mName=mName;
+    this->mName=name;
     this->mBalance=initalBalance;
   }
 
@@ -47,7 +47,7 @@ class Account {
     }
   }
   void printInfo() { //계좌정보 출력
-    std::cout << "계좌번호: "<< this->mId << "예금주: "<< this->mName << "잔액: " << this->mBalance << std::endl;
+    std::cout << "계좌번호: "<< this->mId << " 예금주: "<< this->mName << " 잔액: " << this->mBalance << std::endl;
   }
 
 
