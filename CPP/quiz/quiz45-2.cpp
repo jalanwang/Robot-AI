@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <memory>
+#include <vector>
 
 
 class Hero {
@@ -35,14 +36,15 @@ class Wizard : public Hero {
   }
 };
 
-int main() {  
-  
-  std::unique_ptr<Hero> knight = std::make_unique<Knight>();
-  std::unique_ptr<Hero> archer = std::make_unique<Archer>();
-  std::unique_ptr<Hero> wizard = std::make_unique<Wizard>();
-   
-  knight->mAttack();
-  archer->mAttack();
-  wizard->mAttack();
-  return 0; 
+int main() {
+  std::vector<std::unique_ptr<Hero>> heroes;
+  heroes.push_back(std::make_unique<Knight>());
+  heroes.push_back(std::make_unique<Archer>());
+  heroes.push_back(std::make_unique<Wizard>());
+
+  for (const auto& hero : heroes) {
+    hero->mAttack();
+  }
+
+  return 0;
 }
