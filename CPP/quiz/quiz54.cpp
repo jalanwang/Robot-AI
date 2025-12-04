@@ -73,7 +73,9 @@ void updatePersonById(std::vector<Person>& addressbook, int id) {
     std::cout << "새 전화번호 입력 : " ;
     std::cin >> pnumber;                
 
-    addressbook.emplace_back(id, name, pnumber); //생성자를 이용해서 해도 될 것 같은데 왜 emplace_back을 썼지? 외부함수라서 그런가?   
+    //addressbook.emplace_back(id, name, pnumber);
+    //생성자를 이용해서 해도 될 것 같은데 왜 emplace_back을 썼지? 외부함수라서 그런가?   
+    addressbook.push_back(Person(id, name, pnumber)); //Person 객체를 생성하여 벡터에 추가
    }
 
    else {
@@ -85,12 +87,17 @@ void updatePersonById(std::vector<Person>& addressbook, int id) {
 
 int main()
 {
-    std::vector<Person> addressbook;
+    std::vector<Person> addressbook; //addressbook은 벡터 꾸러미 이름
+                                    // Person은 벡터 꾸러미 안에 들어가는 개인 정보
     std::unique_ptr<Person> p = std::make_unique<Person>(1, "홍길동", "010-1111-1111");
+                                    // 힙 메모리에 Person 초기화 된 객체를 생성하고
+                                     // 그 포인터를 스마트 포인터 p가 소유
+                                     // unique_ptr이라는 걸 보면 p는 포인터가 확실함
+    
     addressbook.push_back(*p);
     p = std::make_unique<Person>(2, "이순신", "010-2222-2222");
     addressbook.push_back(*p);
-
+    
     int select = -1;
     do
     {
@@ -101,17 +108,17 @@ int main()
         std::cout << "4. 주소록 삭제" << std::endl;
         std::cout << "5. 종료" << std::endl;
         std::cout << " 메뉴 : ";
-        std::cin >> select;
-        
-        int id=0;
-        std::string name="";
-        std::string pnumber="";
-        
+        std::cin >> select;        
+         
         switch (select)
         {
             case 1:
                 //주소록 조회 코드를 작성합니다.
-                for(Person p : addressbook){
+                for(const Person& p : addressbook){ //수정이 필요가 없어서 const 및 레퍼런스로 받음
+                        // 이걸 for문으로 만들면? for(int i=0;i<addressbook.size();i++){}                        
+                        // 또는 for(auto& p = addressbook.begin(); p != addressbook.end(); ++p)
+                        // 또는 for(auto& p : addressbook)
+                        // 또는 auto p : addressbook
                     std::cout << "ID : " << p.getId() << " / ";
                     std::cout << "이름 : " << p.getName() <<" / ";
                     std::cout << "전화번호 : " << p.getPnumber() << std::endl;
@@ -121,8 +128,8 @@ int main()
             {
                 //주소록 추가 코드를 작성합니다.
                 int id=0;
-                std::string name="";
-                std::string pnumber="";
+                std::string name="아무개";
+                std::string pnumber="000-1111-2222";
                 std::cout << "새 ID 입력 : " ;
                 std::cin >> id;
                 std::cout << "새 이름 입력 : " ;
@@ -130,7 +137,8 @@ int main()
                 std::cout << "새 전화번호 입력 : " ;
                 std::cin >> pnumber;     
                 
-                addressbook.emplace_back(id, name, pnumber);
+                //addressbook.emplace_back(id, name, pnumber);
+                addressbook.push_back(Person(id, name, pnumber)); //Person 객체를 생성하여 벡터에 추가
                 break;
             }
                        
@@ -138,11 +146,8 @@ int main()
             {
                 int updateId = 0;
                 std::cout << "수정할 ID 입력 : ";
-
-
                 std::cin >> updateId;
-                updatePersonById(addressbook, updateId);
-                
+                updatePersonById(addressbook, updateId);                
                 break;
             }
             
@@ -152,8 +157,7 @@ int main()
                 int deleteId = 0;
                 std::cout << "삭제할 ID 입력 : ";
                 std::cin >> deleteId;
-                deletePersonById(addressbook, deleteId);
-                
+                deletePersonById(addressbook, deleteId);                
                 break;
             }
 
