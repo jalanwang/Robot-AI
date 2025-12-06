@@ -30,10 +30,23 @@ class Account {
   const int getBalance() {
     return this->mBalance;
   }
-  bool deposit(int amount) { //입금
-    this->mBalance=this->mBalance+amount;
-    std::cout << "입금 완료: " << amount <<"원 입금됨" <<  std::endl;
-    return 1;
+  // bool deposit(int amount) { //입금
+  //   this->mBalance=this->mBalance+amount;
+  //   std::cout << "입금 완료: " << amount <<"원 입금됨" <<  std::endl;
+  //   return 1;
+  // }
+
+  bool deposit(int amount) { //입금계좌가 있으면 입금한다.
+    if(this->mId) {
+      this->mBalance=this->mBalance+amount;
+      std::cout << "입금 완료: " << amount <<"원 입금됨" <<  std::endl;
+      return 1;
+    }
+    else {
+      std::cout << "입금 계좌가 없습니다:" << std::endl;
+      return 0;
+    }
+
   }
   bool withdraw(int amount) { //출금
     if(this->mBalance >= amount) {
