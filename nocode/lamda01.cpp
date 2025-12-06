@@ -1,6 +1,6 @@
 //람다의 깊은 복사 예제
 #include <iostream>
-#include <functional> // std::function을 사용하지 않고 auto 람다의 동작 원리 이해를 위해
+//#include <functional> // std::function을 사용하지 않고 auto 람다를 사용했다.
 
 int main() {
     int initial_x = 10;
