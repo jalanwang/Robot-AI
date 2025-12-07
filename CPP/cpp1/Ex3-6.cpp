@@ -1,22 +1,25 @@
+// Ex3-6.cpp
+// 직사각형(Rect) 클래스 정의 및 사용 예제
+
 #include <iostream>
 
 class Rect {
 public:
-    int width;
-    int height;
+    int mWidth;
+    int mHeight;
 
-    Rect() : width(1), height(1) {}
-    Rect(int _width, int _height) {
-        width = _width;
-        height = _height;
+    Rect() :  mWidth(1), mHeight(1) {} // 기본 생성자  
+    Rect(int width, int height) { // 매개변수 있는 생성자
+        mWidth = width;
+        mHeight = height;
     }
-    Rect(int _width) {
-        width = _width;
-        height = _width;
+    Rect(int width) { // 정사각형 생성자
+        mWidth = width;
+        mHeight = width;
     }
 
     bool isSquare() {
-        return width == height;
+        return mWidth == mHeight;
     }
 };
 

@@ -1,101 +1,103 @@
 #include <iostream>
 using namespace std;
 
-
 // ====================================
-// 1. 얕은 복사
+// 1. 얕은 복사 (Shallow Copy)
+// 포인터 멤버가 있을 때, 주소값만 복사하는 방식
 // ====================================
 class TwinShallow {
 private:
-    // 모든 객체가 공유하는 정적 변수
-    static int d1;
-    static int d2;
+    int* data; // 포인터 멤버
 
 public:
-    TwinShallow(int a, int b) {
-        d1 = a;
-        d2 = b;
+    TwinShallow(int val) {
+        data = new int(val);
     }
 
-    // 복사 생성자 - 아무 일을 하지 않아도 어차피 static 데이터 공유
-    TwinShallow(const TwinShallow& other) {}
+    // 얕은 복사 생성자 (컴파일러 기본 생성자와 동일한 동작)
+    // 단순히 주소값만 복사함 -> 두 객체가 하나의 메모리를 가리킴
+    TwinShallow(const TwinShallow& other) {
+        data = other.data; 
+        cout << ">> [Shallow] 복사 생성자 호출: 주소만 복사됨 (Data 공유)\n";
+    }
 
-    void set(int a, int b) {
-        d1 = a;
-        d2 = b;
+    void set(int val) {
+        *data = val;
     }
 
     void print(const char* name) const {
-        cout << name << " : (" << d1 << ", " << d2 << ")  [공유 static]\n";
+        cout << name << " : 값=" << *data << " (주소: " << data << ")\n";
     }
-};
-// static 멤버 초기화
-int TwinShallow::d1 = 0;
-int TwinShallow::d2 = 0;
 
+    // 주의: 얕은 복사된 객체들이 소멸될 때, 
+    // 동일한 메모리를 중복 해제(Double Free)하려다 런타임 에러가 발생할 수 있음.
+    // 이 예제에서는 에러 방지를 위해 소멸자에서 메모리 해제를 생략함.
+    // ~TwinShallow() { delete data; } 
+};
 
 // ====================================
-// 2. 깊은 복사 (객체마다 독립된 값)
+// 2. 깊은 복사 (Deep Copy)
+// 포인터 멤버가 있을 때, 실제 메모리를 새로 할당해서 값을 복사하는 방식
 // ====================================
 class TwinDeep {
 private:
-    int d1, d2;
+    int* data;
 
 public:
-    TwinDeep(int a, int b) : d1(a), d2(b) {}
+    TwinDeep(int val) {
+        data = new int(val);
+    }
 
-    // 깊은 복사 생성자: 값 그대로 복사
+    // 깊은 복사 생성자
+    // 새로운 메모리를 할당하고 값만 가져옴 -> 완전 독립
     TwinDeep(const TwinDeep& other) {
-        d1 = other.d1;
-        d2 = other.d2;
+        data = new int(*other.data);
+        cout << ">> [Deep] 복사 생성자 호출: 새 메모리 할당 (독립)\n";
     }
 
-    TwinDeep* clone() const {
-        return new TwinDeep(*this);
+    ~TwinDeep() {
+        delete data;
     }
 
-    void set(int a, int b) {
-        d1 = a;
-        d2 = b;
+    void set(int val) {
+        *data = val;
     }
 
     void print(const char* name) const {
-        cout << name << " : (" << d1 << ", " << d2 << ")\n";
+        cout << name << " : 값=" << *data << " (주소: " << data << ")\n";
     }
 };
 
-
 int main() {
-    cout << "=== 얕은 복사: TwinShallow (static 공유) ===\n";
+    cout << "=== 1. 얕은 복사 테스트 (주소 공유) ===\n";
+    {
+        TwinShallow s1(10);
+        TwinShallow s2 = s1; // 얕은 복사 발생
 
-    TwinShallow s1(10, 20);
-    TwinShallow s2 = s1;   // 얕은 복사: 자동 공유
+        s1.print("s1");
+        s2.print("s2");
 
-    s1.print("s1 초기");
-    s2.print("s2 초기");
+        cout << "\n[s2의 값을 999로 변경]\n";
+        s2.set(999);
 
-    cout << "\n[s2.set(100, 200) 호출]\n";
-    s2.set(100, 200);
+        s1.print("s1"); // s1도 같이 바뀜 (문제 발생)
+        s2.print("s2");
+    } 
+    
+    cout << "\n\n=== 2. 깊은 복사 테스트 (독립적) ===\n";
+    {
+        TwinDeep d1(10);
+        TwinDeep d2 = d1; // 깊은 복사 발생
 
-    s1.print("s1 변경 후");
-    s2.print("s2 변경 후");
+        d1.print("d1");
+        d2.print("d2");
 
+        cout << "\n[d2의 값을 999로 변경]\n";
+        d2.set(999);
 
-    cout << "\n=== 깊은 복사: TwinDeep (독립) ===\n";
-
-    TwinDeep* d1 = new TwinDeep(10, 20);
-    TwinDeep* d2 = d1->clone(); //객체복사로 객체생성가능
-
-    d1->print("d1 초기");
-    d2->print("d2 초기");
-
-    cout << "\n[d2.set(100, 200) 호출]\n";
-    d2->set(100, 200);
-
-    d1->print("d1 변경 후");
-    d2->print("d2 변경 후");
-
-    delete d2;
+        d1.print("d1"); // d1은 그대로 10 유지
+        d2.print("d2");
+    } // d1, d2 소멸자 호출되면서 각각 메모리 정상 해제
 
     return 0;
 }

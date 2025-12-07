@@ -1,4 +1,3 @@
-//이름을 입력받아 테두리로 묶인 인사말을 생성
 #include <iostream>
 #include <string>
 
