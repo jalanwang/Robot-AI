@@ -23,3 +23,18 @@ for i in range(len(ordered_list)):
         max_idx=i+1 #인덱스값 +1이 실재 숫자값
 
 print("최대가 되는 경우: {} * {} = {}".format(max_idx,100-max_idx,max_value))
+
+# 더 간단하게 짜는 경우
+# 파이썬도 C의 for문과 비슷하게 짤 수 있군. 괜히 고생했군.
+# max_value = 0
+# a = 0
+# b = 0
+
+# for i in range(1, 100):
+#     j = 100 - i
+#     if i*j > max_value:
+#         max_value = i*j
+#         a = i
+#         b = j
+
+# print('최대가 되는 경우 : {} * {} = {}'.format(a, b, max_value))
