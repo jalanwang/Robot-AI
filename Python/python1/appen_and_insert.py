@@ -1,6 +1,10 @@
 listA=[]
 
-listA.appen(1)
-listA.appen(2)
-listA.appen(3)
+listA.append(1)
+listA.append(2)
+listA.append(3)
 
+print(listA)
+
+listA.insert(0, 0)
+print(listA)
