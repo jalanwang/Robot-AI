@@ -28,5 +28,5 @@ nums=[1,3,5,7]
 
 for it_out in nums:
     for it_in in nums:
-       print(it_out, it_in)
+       print("({},{})".format(it_out, it_in))
 
