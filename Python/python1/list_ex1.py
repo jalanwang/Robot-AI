@@ -1,8 +1,8 @@
 array=[1,2,3,"say hello", 5]
 for element in array:
-    if element.isdigit(): 
-        pass
+    if str(element).isdigit(): 
+        print(element)
     else: 
         element.remove()
 
-print(array)
+
