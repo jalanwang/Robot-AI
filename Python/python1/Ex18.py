@@ -2,15 +2,13 @@
 #단 continue를 사용해야 합니다.
 #루프는 while을 사용하세요.
 # 3 6 9
-i=1
-while i<11:
+i=0
+while i<10:
+    i+=1
     if (i%3)!=0:
         continue
-
-    else:
-        print(i, end=' ')
     
-    i+=1
-
+    print(i, end=' ')
+print()
 
 
