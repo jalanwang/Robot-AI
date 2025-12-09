@@ -3,7 +3,7 @@
 #루프는 while을 사용하세요.
 # 3 6 9
 i=0
-while i<10:
+while i<11:
     i+=1
     if (i%3)!=0:
         continue
