@@ -10,3 +10,11 @@ print(list_a)
 
 list_b=[3*i for i in range(1, 10)]
 print(list_b)
+
+#words=["apple", "kewi", "banana", "grape", "pear"]
+#길이가 5이상인 단어만 선택해서 출력하시오.
+
+words=["apple", "kewi", "banana", "grape", "pear"]
+long_word=[word for word in words if len(word)>=5]
+
+print(long_word)
