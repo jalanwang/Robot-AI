@@ -8,4 +8,4 @@ def sum_all(start=0, end=100, step=1):
 print("A.", sum_all(0,100,10))
 print("B.", sum_all(end=100))
 print("C.", sum_all(end=100, step=2))
-print("D.", sum_all(1, 10, 10))
+print("D.", sum_all(1, 100, 10))
