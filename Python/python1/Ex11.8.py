@@ -5,6 +5,9 @@ dct= {
     "origin": "필리핀"
 }
 
-for key in dct:
+for key in dct: # 값을 하나씩 꺼내서 출력해줌
     print(key, " : ", dct[key])
+
+print()
+print(dct) # 딕셔너리를 보여줌
     
