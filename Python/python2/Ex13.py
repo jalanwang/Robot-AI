@@ -12,6 +12,8 @@ for item in list_input_a:
         pass
     else:
         list_num.append(item)
-        
+    finally:
+        print("잘 하고 있어요")
+
 print(f"{list_input_a} 내부에 있는 숫자는", end=' ')
 print(f"{list_num}입니다.")
