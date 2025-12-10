@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <vector>
 
 int main()
 {
@@ -10,4 +11,12 @@ int main()
     }
 
     delete numsPtr;
+    std::cout << std::endl;
+    
+    std::vector<int> nums(5);
+    for (int i=0;i<5;i++)  {
+        nums[i]=i;
+        std::cout << nums[i] << " ";
+    }
+
 }
