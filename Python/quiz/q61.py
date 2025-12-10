@@ -26,7 +26,7 @@ family_name = list("김이박최강고한천유피")
 given_name = list("가나다라마바사아자차카타파하")
 
 flag=range(1, 101) #1%가 외자라 가정
-with open('student_scores.csv', 'w') as file:
+with open('./student_scores.csv', 'w') as file:
      file.write('id, name, math, english\n')
      for i in range(data_number):
         id=i+1
