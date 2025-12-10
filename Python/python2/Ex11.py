@@ -3,4 +3,5 @@
 
 numbers=[1,2,3,4,5,6]
 mapped=map(str, numbers)
-print("::".join(mapped))
+a=",".join(mapped)
+print(a)
