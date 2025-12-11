@@ -7,7 +7,13 @@ class Person:
     #getter
     def getName(self):
         return self.__name
+    #setter
+    def setName(self, name):
+        self.__name=name
 
 #main
 soonsin = Person('이순신')
 print(soonsin.getName())
+soonsin.setName('강감찬')
+print(soonsin.getName())
+
