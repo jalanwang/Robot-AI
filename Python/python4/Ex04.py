@@ -35,3 +35,5 @@ if __name__ == "__main__":
     # 다형성: Shape 타입으로 호출해도 실제 객체의 draw() 실행
     for shape in shapes:
         shape.draw()
+    print()
+    shapes[0].draw()
