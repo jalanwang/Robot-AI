@@ -1,6 +1,6 @@
 class Student:
     def __init__(self, name,korean, math, english, science):
-        self.__name=name
+        self.__name=name  ## private, 언더바가 한개면 프로텍트
         self.__korean=korean
         self.__math = math
         self.__english=english
