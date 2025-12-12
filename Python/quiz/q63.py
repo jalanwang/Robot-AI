@@ -32,7 +32,7 @@ class Bus:
 # main 함수
 if __name__ == "__main__":
     # 부모 클래스 타입으로 자식 인스턴스를 관리 (C++의 Shape* 개념)
-    vehicles: list[Taxi] = [ #: list[Shape] <<< 이건 타입을 보여주기 위해서. 없어도 된다.
+    vehicles: list[Vehicle] = [ #: list[Vehicles <<< 이건 타입을 보여주기 위해서. 없어도 된다.
         Taxi(),
         Truck(),
         Bus()
