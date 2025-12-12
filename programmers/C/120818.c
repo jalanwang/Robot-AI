@@ -1,32 +1,27 @@
 // 문제 설명
-// 머쓱이네 옷가게는 10만 원 이상 사면 5%, 30만 원 이상 사면 10%, 50만 원 이상 사면 20%를 할인해줍니다.
-// 구매한 옷의 가격 price가 주어질 때, 지불해야 할 금액을 return 하도록 solution 함수를 완성해보세요.
+// 머쓱이는 추운 날에도 아이스 아메리카노만 마십니다.
+// 아이스 아메리카노는 한잔에 5,500원입니다.
+// 머쓱이가 가지고 있는 돈 money가 매개변수로 주어질 때,
+// 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 순서대로 담은
+// 배열을 return 하도록 solution 함수를 완성해보세요.
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
-int solution(int price) {
-    int answer = 0;
-    double rate=0;
-    if(price >=500000) {
-        rate=0.2;
-    }
-    else if(price >= 300000) {
-        rate=0.1;
-    }
- else if(price >= 100000) {
-        rate=0.05;
-    }    
-
-    return (price*(1-rate));
+int* solution(int money) {
+    // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
+    int* answer = (int*)malloc(2*sizeof(int));
+    answer[0]=money/5500;
+    answer[1]=money%5500;
+    return answer;
 }
 
 
 int main() {
-    int price = 1000000;
-    double sol=solution(price);
-    printf("새로운 가격은: %.1lf", sol);
+    int price =34000;
+    int* sol=solution(price);
+    printf("살수 있는 커피의 갯수: %d / 그리고 잔돈: %d", sol[0], sol[1]);
 
     return 0;
 }
