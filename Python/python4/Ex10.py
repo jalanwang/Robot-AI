@@ -8,11 +8,10 @@ class Student:
     @classmethod
     def print(cls):
         print(' ----- 학생 목록 -----')
-        for student in cls.students:
-            print('이름\t총점\t평균')
-            for student in cls.students:
-                print(str(student))
-            print('--------------------------')
+        print('이름\t총점\t평균')
+        for student in cls.Students:
+            print(str(student))
+        print('--------------------------')
     
     def __init__(self, name, korean, math, english, science):
         self.name = name
