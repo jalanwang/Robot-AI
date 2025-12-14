@@ -24,11 +24,11 @@ int main() {
         std::vector<double> homework;
         double score;
 
-        while(std::cin >> score) {
+        while(std::cin >> score) { // 이 부분을 함수로 만들어서 처리하려면 p90-2.cpp를 참조
             homework.push_back(score);            
         }
 
-        typedef std::vector<double>::size_type vec_sz;
+        typedef std::vector<double>::size_type vec_sz; //p90-1.cpp 참조
         vec_sz size = homework.size();
 
         if(size==0) {
@@ -42,13 +42,11 @@ int main() {
 
         median = (size%2 ==0) ? (homework[mid]+homework[mid-1])/2 : homework[mid];
 
-        std::cout << "학생 " << name << "의 이번학기 성적은 " <<
-            0.2*midterm + 0.4*final+0.4*median << std::endl;
+        std::streamsize prec = std::cout.precision(); // 나중에 원상 복귀를 위해서 값을 저장해 놓음
+        std::cout << "학생 " << name << "의 이번 학기 성적은 " << std::setprecision(3) <<
+            0.2*midterm + 0.4*final+0.4*median << std::setprecision(prec) << std::endl;
 
         return 0;
-        
-
-
 
 }
 
