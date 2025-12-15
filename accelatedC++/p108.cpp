@@ -71,7 +71,7 @@ int main() {
             double final_grade=grade(midterm, final, homework);
             std::streamsize prec = std::cout.precision();
             std::cout << "학생 " << name << "의 이번 학기 성적은 " << std::setprecision(3) << final_grade << std::setprecision(prec) << std::endl;
-        } catch (std::domain_error e) {
+        } catch (const std::domain_error& e) { // 요즘은 이렇케 받는다.            
             std::cout << e.what() << std::endl;
             return 1;
         }
