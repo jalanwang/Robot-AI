@@ -2,6 +2,7 @@ import sqlite3
 import os
 
 #dbPath = "/mnt/c/Users/User/databases/test7.db"
+#wsl로 가지고 오고 파일과 같은 폴더에 생성토록 변경 함
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 dbPath = os.path.join(BASE_DIR, "test8.db")
 
@@ -66,7 +67,29 @@ class PersonRepository:
 
         conn.close()
         return persons
+    
+    def update(self, person: Person):
+        conn = self.getConnection()
+        cur = conn.cursor()
 
+        sql = """
+        UPDATE Person
+        SET Name=?, Pnumber=?
+        WHERE ID=?;
+        """
+
+        cur.execute(sql, (person.name, person.pnumber, person.id))
+        conn.commit()
+        conn.close()
+
+    def delete(self, id: int):
+        conn = self.getConnection()
+        cur = conn.cursor()
+
+        sql = "DELETE FROM Person WHERE ID=?;"
+        cur.execute(sql, (id,))
+        conn.commit()
+        conn.close()
 
 def main():
     repo = PersonRepository(dbPath)
@@ -76,13 +99,14 @@ def main():
         print("\n=== Person Address Book ===")
         print("1. 사람 추가")
         print("2. 전체 조회")
-        print("3. 테스트 데이터 자동 추가")
+        print("3. 수정")
+        print("4. 삭제")
         print("0. 종료")
 
         choice = input("선택: ").strip()
 
         match choice:
-            case "1":
+            case "1": # 삽입
                 name = input("이름: ").strip()
                 pnumber = input("전화번호: ").strip()
 
@@ -91,23 +115,26 @@ def main():
 
                 print("저장 완료:", person)
 
-            case "2":
+            case "2": # 조회
                 persons = repo.findAll()
                 print("\n--- 전체 목록 ---")
+                print(f"{'ID':<5} {'이름':<10} {'전화번호':<15}")
+                print("-" * 35)
                 for p in persons:
-                    print(p)
+                    print(f"{p.id:<5} {p.name:<10} {p.pnumber:<15}")
 
-            case "3":
-                dummy_data = [
-                    ("김철수", "010-1234-5678"),
-                    ("이영희", "010-9876-5432"),
-                    ("박민수", "010-5555-7777"),
-                    ("최지우", "010-1111-2222"),
-                    ("홍길동", "010-9999-8888")
-                ]
-                for name, pnumber in dummy_data:
-                    repo.insert(Person(name=name, pnumber=pnumber))
-                print(f"테스트 데이터 {len(dummy_data)}건이 추가되었습니다.")
+            case "3": # 수정
+                id_input = input("수정할 ID: ").strip()
+                name = input("새 이름: ").strip()
+                pnumber = input("새 전화번호: ").strip()
+                
+                repo.update(Person(id=int(id_input), name=name, pnumber=pnumber))
+                print("수정되었습니다.")
+
+            case "4": # 삭제
+                id_input = input("삭제할 ID: ").strip()
+                repo.delete(int(id_input))
+                print("삭제되었습니다.")
 
             case "0":
                 print("프로그램 종료")
