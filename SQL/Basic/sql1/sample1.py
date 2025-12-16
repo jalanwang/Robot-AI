@@ -107,13 +107,20 @@ def main():
 
         match choice:
             case "1": # 삽입
-                name = input("이름: ").strip()
-                pnumber = input("전화번호: ").strip()
+                try:
+                    name = input("이름: ").strip()
+                    if not name:
+                        raise ValueError("이름을 입력해야 합니다.")
 
-                person = Person(name=name, pnumber=pnumber)
-                repo.insert(person)
+                    pnumber = input("전화번호: ").strip()
+                    if not pnumber:
+                        raise ValueError("전화번호를 입력해야 합니다.")
 
-                print("저장 완료:", person)
+                    person = Person(name=name, pnumber=pnumber)
+                    repo.insert(person)
+                    print("저장 완료:", person)
+                except ValueError as e:
+                    print(f"오류: {e}")
 
             case "2": # 조회
                 persons = repo.findAll()
@@ -127,6 +134,8 @@ def main():
                 id_input = input("수정할 ID: ").strip()
                 name = input("새 이름: ").strip()
                 pnumber = input("새 전화번호: ").strip()
+                #정규식을 통한 전화번호 입력 검증 - 모듈 re이용
+                #다시 자성할 예정이다.
                 
                 repo.update(Person(id=int(id_input), name=name, pnumber=pnumber))
                 print("수정되었습니다.")
