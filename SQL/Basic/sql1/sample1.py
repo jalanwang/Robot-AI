@@ -1,7 +1,9 @@
 import sqlite3
+import os
 
-dbPath = "/mnt/c/Users/User/databases/addressbook.db"
-
+#dbPath = "/mnt/c/Users/User/databases/test7.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+dbPath = os.path.join(BASE_DIR, "test8.db")
 
 class Person:
     def __init__(self, id=None, name="", pnumber=""):
@@ -74,6 +76,7 @@ def main():
         print("\n=== Person Address Book ===")
         print("1. 사람 추가")
         print("2. 전체 조회")
+        print("3. 테스트 데이터 자동 추가")
         print("0. 종료")
 
         choice = input("선택: ").strip()
@@ -93,6 +96,18 @@ def main():
                 print("\n--- 전체 목록 ---")
                 for p in persons:
                     print(p)
+
+            case "3":
+                dummy_data = [
+                    ("김철수", "010-1234-5678"),
+                    ("이영희", "010-9876-5432"),
+                    ("박민수", "010-5555-7777"),
+                    ("최지우", "010-1111-2222"),
+                    ("홍길동", "010-9999-8888")
+                ]
+                for name, pnumber in dummy_data:
+                    repo.insert(Person(name=name, pnumber=pnumber))
+                print(f"테스트 데이터 {len(dummy_data)}건이 추가되었습니다.")
 
             case "0":
                 print("프로그램 종료")
