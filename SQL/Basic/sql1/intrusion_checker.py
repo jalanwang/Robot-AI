@@ -1,3 +1,6 @@
+# 지금 만들어진 데이타를 웨에 게시할 코드를 작성할 것이다.
+# 플라스크를 이용한다.
+
 import os
 import sqlite3
 from datetime import datetime
@@ -177,3 +180,4 @@ if __name__ == "__main__":
         db.print_month_pivot() # 월별 피벗 테이블 출력
         db.print_repeat_critical_attacks()
         db.close()
+
