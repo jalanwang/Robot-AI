@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Log Dashboard</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">🔥 Firewall Log Dashboard</h1>
+        
+        <!-- 요약 정보 섹션 -->
+        <div class="row mb-4">
+            <!-- 위험도 레벨별 현황 -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">📊 위험도 레벨별 현황</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead><tr><th>Level</th><th>Count</th></tr></thead>
+                            <tbody>
+                                {% for row in level_summary %}
+                                <tr>
+                                    <td>
+                                        <span class="badge bg-{{ 'danger' if row['level'] == 'CRITICAL' else 'warning' if row['level'] == 'WARNING' else 'info' }}">
+                                            {{ row['level'] }}
+                                        </span>
+                                    </td>
+                                    <td>{{ row['count'] }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- CRITICAL 반복 공격 IP -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-danger text-white">🚨 CRITICAL 반복 공격 IP (3회 이상)</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead><tr><th>IP Address</th><th>Count</th></tr></thead>
+                            <tbody>
+                                {% for row in critical_attacks %}
+                                <tr>
+                                    <td>{{ row['ip'] }}</td>
+                                    <td><strong>{{ row['count'] }}</strong></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 월별 피벗 테이블 -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-secondary text-white">📅 월별 위험도 레벨 현황 (Pivot)</div>
+            <div class="card-body overflow-auto">
+                <table class="table table-bordered text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th>LEVEL</th>
+                            {% for month in sorted_months %}
+                            <th>{{ month }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for level in sorted_levels %}
+                        <tr>
+                            <td class="fw-bold">{{ level }}</td>
+                            {% for month in sorted_months %}
+                            <td>{{ pivot_data.get((level, month), 0) }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 전체 로그 목록 -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">📝 전체 로그 목록</div>
+            <div class="card-body overflow-auto" style="max-height: 600px;">
+                <table class="table table-hover table-sm">
+                    <thead class="table-light sticky-top">
+                        <tr>
+                            <th>ID</th><th>Date</th><th>Time</th><th>Level</th><th>IP</th><th>Incident</th><th>Rule</th><th>Request</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for log in logs %}
+                        <tr>
+                            <td>{{ log['id'] }}</td>
+                            <td>{{ log['date'] }}</td>
+                            <td>{{ log['time'] }}</td>
+                            <td><span class="badge bg-{{ 'danger' if log['level'] == 'CRITICAL' else 'warning' if log['level'] == 'WARNING' else 'info' }}">{{ log['level'] }}</span></td>
+                            <td>{{ log['ip'] }}</td>
+                            <td>{{ log['incident'] }}</td>
+                            <td>{{ log['rule'] }}</td>
+                            <td class="text-truncate" style="max-width: 300px;" title="{{ log['request'] }}">{{ log['request'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
