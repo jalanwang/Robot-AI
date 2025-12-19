@@ -12,6 +12,13 @@
 
 extern void show1();
 extern void show2();
+extern void show3();
+extern void show4();
+extern void show5();
+extern void show6();
+extern void show7();
+extern void show8();
+extern void show9();
 
 int main()
 {
@@ -20,7 +27,15 @@ int main()
     // ./lenna.png 파일을 그레이스케일로 읽기
     // 주석의 의도대로 IMREAD_GRAYSCALE 플래그를 추가했습니다.
     //show1();
-    show1();
+    //show2();
+    //show3();
+    //show4();    
+    // show5();
+    // show6();
+    //show7();
+    show8();
+    // show9();
+
     /*(
     cv::Mat src = cv::imread("./Lenna.png", cv::IMREAD_GRAYSCALE);
 
@@ -36,6 +51,7 @@ int main()
     cv::waitKey(0);
 	cv::destroyWindow("LENNA");
     */
+   return 0;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
