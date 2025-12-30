@@ -10,12 +10,19 @@
 #include "opencv2/opencv.hpp"
 #include <iostream>
 
+extern void show0_1();
+extern void show0_2();
+extern void show0_3();
+extern void show0_4();
 extern void show1();
 extern void show2();
 extern void show3();
 extern void show4();
-extern void show5();
-extern void show6();
+extern void show5_0();
+extern void show5_1();
+extern void show6_0();
+extern void show6_1();
+extern void show6_2();
 extern void show7();
 extern void show8();
 extern void show9();
@@ -26,14 +33,21 @@ int main()
 
     // ./lenna.png 파일을 그레이스케일로 읽기
     // 주석의 의도대로 IMREAD_GRAYSCALE 플래그를 추가했습니다.
-    //show1();
-    //show2();
-    //show3();
-    //show4();    
-    // show5();
-    // show6();
-    //show7();
-    show8();
+    // show0_1();
+    // show0_2();
+    // show0_3();
+    // show0_4();
+    // show1();
+    // show2();
+    // show3();
+    // show4();    
+    // show5_0();
+    // show5_1();
+    //show6_0();
+    //show6_1();
+    show6_2();
+    // show7();
+    // show8();
     // show9();
 
     /*(

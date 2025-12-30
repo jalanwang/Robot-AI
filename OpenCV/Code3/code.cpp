@@ -1,11 +1,78 @@
 #include "opencv2/opencv.hpp"
 #include <iostream>
 
+void show0_1() {
+	cv::Mat img1;
 
+	cv::Mat img2(480, 640, CV_8UC1);
+	cv::Mat img3(480, 640, CV_8UC3);
+	cv::Mat img4(cv::Size(640, 480), CV_8UC3);
+	
+	cv::namedWindow("Image2");
+	cv::imshow("Image2", img2);
+	cv::namedWindow("Image3");
+	cv::imshow("Image3", img3);
+	cv::namedWindow("Image4");
+	cv::imshow("Image4", img4);
+
+	cv::waitKey(0);
+	cv::destroyAllWindows();	
+}
+
+void show0_2() { // Scalar 클래스 사용
+	cv::Mat img5(480, 640, CV_8UC1, cv::Scalar(128));
+	cv::Mat img6(480, 640, CV_8UC3, cv::Scalar(255,0,0));
+
+	cv::imshow("Image5", img5);
+	cv::imshow("Image6", img6);
+
+	cv::waitKey(0);
+	cv::destroyAllWindows();	
+}
+
+void show0_3() { // 초깃값 설정함수
+	cv::Mat mat1 = cv::Mat::zeros(3,3,CV_32SC1);
+	cv::Mat mat2 = cv::Mat::ones(3,3,CV_32FC1);
+	cv::Mat mat3 = cv::Mat::eye(3,3,CV_32FC1);
+
+	std::cout << mat1 << std::endl;
+	std::cout << mat2 << std::endl;
+	std::cout << mat3 << std::endl;
+}
+
+// 어레이, 콤마, 브라킷을 이용한 데이타 삽입
+// create() 메소드를 이용한 메모리 재할당
+void show0_4() { 
+
+	float data[]={1,2,3,4,5,6};
+	cv::Mat mat4(2,3,CV_32FC1, data); 
+
+	cv::Mat mat5=(cv::Mat_<float>(2,3) << 1,2,3,4,5,6);
+	cv::Mat mat6=cv::Mat_<uchar>({2,3}, {1,2,3,4,5,6});
+
+	std::cout << mat4 << std::endl;
+	std::cout << mat5 << std::endl;
+	std::cout << mat6 << std::endl;
+
+	mat4.create(4,4, CV_8UC3); // 메모리 재할당 
+	mat5.create(4,4, CV_32FC1); // 메모리 재할당
+
+	std::cout << mat4 << std::endl;
+	std::cout << mat5 << std::endl;
+
+	mat4 = cv::Scalar(255,0,0); // blue color
+	mat5.setTo(1.0f);	
+
+	std::cout << mat4 << std::endl;
+	std::cout << mat5 << std::endl;
+
+}
+
+// 이미지 읽기 및 정보 출력
 void show1() {
 
-cv::Mat image1 = cv::imread("lenna.png");
-cv::Mat image2 = cv::imread("dog.jpg");
+cv::Mat image1 = cv::imread("lenna.bmp");
+cv::Mat image2 = cv::imread("dog.bmp");
 cv::Mat image3;
 
 image3 = image1.clone();
@@ -30,11 +97,13 @@ cv::namedWindow("Image2");
 cv::imshow("Image2", image2);
 cv::namedWindow("Image3");
 cv::imshow("Image3", image3);
+
 cv::waitKey(0);
 cv::destroyAllWindows();
 
 }
 
+ //스칼라 클래스 사용 연습
 void show2() {
 
 	cv::namedWindow("Color");
@@ -60,6 +129,7 @@ void show2() {
 	}
 }
 
+// 스태밍 함수 사용
 void show3() {
 	cv::Mat img1 = cv::Mat::zeros(512,512,CV_8UC1);
 	cv::Mat img2 = cv::Mat::ones(512,512,CV_8UC1);
@@ -78,7 +148,9 @@ void show3() {
 	cv::destroyAllWindows();
 
 }
-
+ // clone() 메소드를 이용한 복사
+ // copyTo() 메소드를 이용한 복사
+ // 단순 대입을 이용한 복사. 얕은 복사, 참조 복사
 void show4() {
 	
 	cv::Mat imgDog= cv::imread("dog.bmp");
@@ -91,31 +163,39 @@ void show4() {
 	cv::namedWindow("Dog");
 	cv::imshow("Dog", imgDog);
 
-	cv::Mat imgClonDog = imgDog.clone();
+	cv::Mat imgClonedDog = imgDog.clone(); 
 
-	cv::Mat img3;	
-	imgDog.copyTo(img3); // copied dog
+	cv::Mat copiedDog;	
+	imgDog.copyTo(copiedDog); // copied dog
 
-	cv::Mat img4 = imgDog; //shallow copy
-	imgDog.setTo(cv::Scalar(0, 255, 255)); // yellow color	
+	cv::Mat shallowCopiedDog = imgDog; //shallow copy
 	
-	cv::namedWindow("ClonDog");
-	cv::imshow("ClonDog", imgClonDog);
+	cv::namedWindow("Cloned Dog");
+	cv::imshow("Cloned Dog", imgClonedDog);
 
 	cv::namedWindow("Copied Dog");
-	cv::imshow("Copied Dog", img3);
+	cv::imshow("Copied Dog", copiedDog);
 	
-	cv::namedWindow("Copied Dog2");
-	cv::imshow("Copied Dog2", img4);
+	cv::namedWindow("Shallowed Copied Dog");
+	cv::imshow("Shallowed Copied Dog", shallowCopiedDog);
+
+	imgDog.setTo(cv::Scalar(0, 255, 255)); // yellow color	
+	cv::namedWindow("Dog after setTo");
+	cv::imshow("Dog after setTo", imgDog);
+
+	cv::namedWindow("Shallowed Copied Dog after setTo");
+	cv::imshow("Shallowed Copied Dog after setTo", shallowCopiedDog);
+
 
 	cv::waitKey(0);
 	cv::destroyAllWindows();
 }
 
-void show5() {
+// 부분 반전, 부분 복사
+void show5_0() {
 	cv::Mat imgCat = cv::imread("cat.bmp");
 	cv::Mat notCat = ~imgCat;
-	cv::Mat img3 = imgCat(cv::Rect(220, 120, 340, 240)); // 영역을 분할하라는 명령어
+	cv::Mat windowImg = imgCat(cv::Rect(220, 120, 340, 240)); // 영역을 분할하라는 명령어	
 
 	cv::imread("Cat", imgCat);
 	cv::namedWindow("Cat");
@@ -125,15 +205,38 @@ void show5() {
 	cv::imshow("~Cat", notCat);	
 
 	cv::namedWindow("Region of Cat");
-	cv::imshow("Region of Cat", img3);	
+	cv::imshow("Region of Cat", windowImg);	
 	
 	cv::waitKey(0);
 	cv::destroyAllWindows();
-
 }
 
-void show6() {
-	cv::Mat img1 = cv::Mat::zeros(512,512,CV_8UC1);
+// 부분 반전, 부분 복사, 원본 변경시 clone 복사에 영향 없는지 확인
+void show5_1() {
+	cv::Mat imgCat = cv::imread("cat.bmp");
+	if(imgCat.empty()) {
+		std::cerr << "파일이 없습니다." << std::endl;
+		return;
+	}
+
+	cv::Mat windowImg = imgCat(cv::Rect(220, 120, 340, 240)); // 영역을 분할하라는 명령어
+	cv::Mat windowImgCloned = windowImg.clone(); // 영역을 복사하라는 명령어
+
+	windowImg= ~windowImg; // 부분 반전
+
+	cv::imshow("Image Cat", imgCat);
+	cv::imshow("Window Image Cat", windowImg);	
+	cv::imshow("Window Image Cloned Cat", windowImgCloned);
+	
+	cv::waitKey(0);
+	cv::destroyAllWindows();
+}
+
+
+// Mat::at<>() 메소드 사용법
+// 행렬의 원소값 참조 방법 중 첫 번째
+void show6_0() {
+	cv::Mat img1 = cv::Mat::zeros(256,256,CV_8UC1);
 	
 	uchar value=0;
 	for(int i=0;i<img1.rows;i++) {
@@ -144,6 +247,48 @@ void show6() {
 		}
 	}
 
+	cv::namedWindow("Image1");
+	cv::imshow("Image1",img1);
+
+	cv::waitKey(0);
+	cv::destroyAllWindows();
+
+}
+
+// Mat::ptr<>() 포인터를 이용하는 법
+// 행렬의 원소값 참조 방법 중 두 번째
+void show6_1() {
+	cv::Mat img1 = cv::Mat::zeros(256,256,CV_8UC1);
+	
+	
+	for(int j=0;j<img1.rows;j++) {
+		uchar* p = img1.ptr<uchar>(j);
+		for(int i=0;i<img1.cols;i++) {
+			
+			//p[i]++; // 교재가 잘못됨.
+			p[i]=j; // 행 번호로 값 설정
+			// p[i]=i; // 열 번호로 값 설정
+		}
+	}
+
+	cv::namedWindow("Image1");
+	cv::imshow("Image1",img1);
+
+	cv::waitKey(0);
+	cv::destroyAllWindows();
+
+}
+
+// Mat::Iterrator_<>를 이용하는 법
+// 행렬의 원소값 참조 방법 중 세 번째
+void show6_2() {
+	cv::Mat img1 = cv::Mat::zeros(256,256,CV_8UC1);	
+	
+	for(cv::MatIterator_<uchar> it=img1.begin<uchar>();it!=img1.end<uchar>();it++) {
+		//*it=128;
+		*it=it.pos().y; // 행 번호로 값 설정
+		// *it=it.pos().x; // 열 번호로 값 설정
+	}
 	cv::namedWindow("Image1");
 	cv::imshow("Image1",img1);
 
