@@ -25,25 +25,29 @@ int main()
 {
     std::cout << "Hello World! CV Version: " << CV_VERSION << std::endl;
     
-    //show1();
-    //show2();
-    //show3();
-    //show4();    
-   show5();
+   //show1();     
+   show2();
+   //show3();
+   //show4();
+   //show5();
     
-    // show6();
-    // show7();
-    // show8();
-    // show9();
-    // show10();    
-    // show11();
-    //show12();
-    //show13();
-    //show14();                                   
-    //show15();
-    //show16();
-    
-    
+   //show6();
+   //show7();
+   //show8();
+   //show9();
+   //show10();
+
+   //show11();
+   //show12();
+   //show13();
+   //show14();                                   
+   //show15();
+
+   //show16();
+   //show17();
+   //show18();
+   //show19();
+   //show20();     
 
    return 0;
 }

@@ -25,15 +25,15 @@ int main()
 {
     std::cout << "Hello World! CV Version: " << CV_VERSION << std::endl;
     
-   show1();
-   //show2();
-   //show3();
-   //show4();    
-   //show5();
+   //show1(); //색반전
+   //show2(); //색반전 스칼라
+   //show3(); //그레이스케일 변환  
+   //show4(); // 컬러 색상 분리
+   //show5();  // 컬러 색상 분리 후 분리된 채널로 컬러 영상 생성
     
-   //show6();
+   //show6(); // 컬러 이미지의 명암비 늘리기. 컬러 이미지의 히스토그램 다루는 법
    //show7();
-   //show8();
+   show8();
    //show9();
    //show10();
 

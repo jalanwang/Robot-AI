@@ -2,124 +2,236 @@
 #include <iostream>
 #include <vector>
 
-//챕터 9. 에지검출, 선과 원.
+//챕터 10. 컬러영상 다루기
 
-
+// 색반전 1
 void show1() {
-    cv::Mat src=cv::imread("lenna.bmp", cv::IMREAD_GRAYSCALE);
-    
-    cv::Mat dx, dy;
+    cv::Mat src=cv::imread("butterfly.jpg", cv::IMREAD_COLOR);
 
-    cv::Sobel(src, dx, CV_32FC1, 1, 0);
-    cv::Sobel(src, dy, CV_32FC1, 0, 1);
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
+    }
 
-    cv::Mat mag; //크기를 볼 Matrix //
+    cv::Mat dst(src.rows, src.cols, src.type());
 
-    cv::magnitude(dx, dy, mag); //
-    mag.convertTo(mag, CV_8UC1); //8비트로 변환
+    for(int j=0; j<src.rows; j++) {
+        for(int i=0;i<src.cols;i++) {
+            cv::Vec3b& pixel1=src.at<cv::Vec3b>(j, i);
+            cv::Vec3b& pixel2=dst.at<cv::Vec3b>(j, i);
 
-    //cv::Mat edge = mag > 150;
-    cv::Mat edge = mag > 150;
+            pixel2[0]=255-pixel1[0];
+            pixel2[1]=255-pixel1[1];
+            pixel2[2]=255-pixel1[2];
+        }
+    }
+   
 
-    //cv::imshow("dx", dx);
-    //cv::imshow("dy", dy);
-    
     cv::imshow("src", src);
-    cv::imshow("magnitude", mag);
-    cv::imshow("edge", edge);
-
-    cv::waitKey(0);
+    cv::imshow("dst", dst);
+    cv::waitKey();
     cv::destroyAllWindows();
 
     return;
 }
 
-void show2() { //캐니 에지 검출기
-    cv::Mat src=cv::imread("lenna.bmp", cv::IMREAD_GRAYSCALE);
-    
-    cv::Mat dst1, dst2;;
+// 색반전 2 cv::Scalar 사용
+void show2() {
+    cv::Mat src=cv::imread("butterfly.jpg", cv::IMREAD_COLOR);
 
-    cv::Canny(src, dst1, 50, 100);
-    cv::Canny(src, dst2, 50, 150);
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
+    }
+
+    cv::Mat dst(src.rows, src.cols, src.type());
+    dst = cv::Scalar::all(255) - src;
 
     cv::imshow("src", src);
-    cv::imshow("dst1", dst1);
-    cv::imshow("dst2", dst2);
-
-    cv::waitKey(0);
+    cv::imshow("dst", dst);
+    cv::waitKey();
     cv::destroyAllWindows();
 
     return;
 }
 
-void show3() { //직선 검출기
-    cv::Mat src=cv::imread("building.jpg", cv::IMREAD_GRAYSCALE);
-    
-    cv::Mat edge;
 
-    cv::Canny(src, edge, 50, 100);
-    std::vector<cv::Vec2f> lines;
-    cv::HoughLines(edge, lines, 1.0f, CV_PI/180, 250);
-    //cv::HoughLinesP(edge, lines, 1.0f, CV_PI/180, 250, 5.0f, 10.0f);
+// 컬러영상을 cvtColor 함수를 이용, 그레이스케일 영상으로 변환
+void show3() {
+
+    cv::Mat src=cv::imread("butterfly.jpg", cv::IMREAD_COLOR);
+
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
+    }
 
     cv::Mat dst;
-    cv::cvtColor(edge, dst, cv::COLOR_GRAY2BGR);
 
-    for(int i=0; i< lines.size(); i++) {
-         std::cout << i << lines[i][0] << ", " << lines[i][1] << std::endl;
-    }
-    
+    cv::cvtColor(src, dst, cv::COLOR_BGR2GRAY);
+
     cv::imshow("src", src);
-
-    for(size_t i=0;i<lines.size(); i++) {
-        float rho = lines[i][0];
-        float theta = lines[i][1];
-
-        double cos_t=cos(theta);
-        double sin_t=sin(theta);
-        double x0=rho*cos_t;
-        double y0=rho*sin_t;    
-        double alpha=1000;
-        
-        cv::Point pt1(cvRound(x0 + alpha*(-sin_t)), cvRound(y0 + alpha*(cos_t)));
-        cv::Point pt2(cvRound(x0 - alpha*(-sin_t)), cvRound(y0 - alpha*(cos_t)));
-
-        cv::line(dst, pt1, pt2, cv::Scalar(0,0,255),15, cv::LINE_AA);
-    }
-
     cv::imshow("dst", dst);
-    cv::imshow("edge", edge);
-
-    cv::waitKey(0);
+    cv::waitKey();
     cv::destroyAllWindows();
-
+    
     return;
 }
 
+// BGR 컬러영상에서 컬러별 채널 분리
 void show4() {
-    cv::Mat src=cv::imread("coins3.jpg", cv::IMREAD_GRAYSCALE);
 
-    cv::Mat blurred;
-    cv::blur(src, blurred, cv::Size(3,3));
+    cv::Mat src=cv::imread("candies.png", cv::IMREAD_COLOR);
 
-    cv::Mat canny;
-    cv::Canny(blurred, canny, 150, 100);
-    cv::imshow("cannyed", canny);
-
-    std::vector<cv::Vec3f> circles;
-    cv::HoughCircles(blurred, circles, cv::HOUGH_GRADIENT, 1, 50, 240, 30, 15, 30);
-
-    cv::Mat dst;
-    cv::cvtColor(src, dst, cv::COLOR_GRAY2BGR);
-
-    for(cv::Vec3f c:circles) {
-        cv::Point center(cvRound(c[0]), cvRound(c[1]));
-        int radius = cvRound(c[2]);
-        cv::circle(dst, center, radius, cv::Scalar(0,0,255), 3, cv::LINE_AA);
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
     }
+
+    std::vector<cv::Mat> bgr_planes;
+    cv::split(src, bgr_planes);
+
     cv::imshow("src", src);
-    cv::imshow("dst", dst);
-    cv::waitKey(0);
+    cv::imshow("B channel", bgr_planes[0]);
+    cv::imshow("G channel", bgr_planes[1]); 
+    cv::imshow("R channel", bgr_planes[2]);
+    cv::waitKey();
     cv::destroyAllWindows();
 
+    return;
+}
+
+// BGR 컬러영상에서 컬러별 채널 분리. 그리고 분리된 채널로 컬러 영상 생성
+void show5() {
+
+    cv::Mat src=cv::imread("candies.png", cv::IMREAD_COLOR);
+
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
+    }
+
+    std::vector<cv::Mat> bgr_planes;
+    cv::split(src, bgr_planes);
+
+    cv::imshow("src", src);
+    cv::imshow("B channel", bgr_planes[0]);
+    cv::imshow("G channel", bgr_planes[1]); 
+    cv::imshow("R channel", bgr_planes[2]);
+
+
+    cv::Mat dst1, dst2, dst3;
+
+    // cv::merge를 사용하여 채널 합치기 (빈 채널은 0으로 채움)
+    cv::Mat empty = cv::Mat::zeros(src.size(), CV_8UC1);
+    cv::merge(std::vector<cv::Mat>{bgr_planes[0], empty, empty}, dst1);
+    cv::merge(std::vector<cv::Mat>{empty, bgr_planes[1], empty}, dst2);
+    cv::merge(std::vector<cv::Mat>{empty, empty, bgr_planes[2]}, dst3);
+
+    cv::imshow("B channel color", dst1);
+    cv::imshow("G channel color", dst2);
+    cv::imshow("R channel color", dst3);
+
+    cv::waitKey();
+    cv::destroyAllWindows();
+
+    return;
+}
+
+
+// 컬럼 이미지의 히스토그램을 구하고 평활화 한후 이미지 출력하는 일반적인 방법
+void show6() {
+    cv::Mat src=cv::imread("pepper.bmp", cv::IMREAD_COLOR);
+
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
+    }
+
+    cv::Mat dst;
+    cv::cvtColor(src, dst, cv::COLOR_BGR2YCrCb);
+
+    std::vector<cv::Mat> ycrcb_planes;
+    cv::split(dst, ycrcb_planes);
+
+    cv::equalizeHist(ycrcb_planes[0], ycrcb_planes[0]);
+
+    cv::merge(ycrcb_planes, dst);
+    cv::cvtColor(dst, dst, cv::COLOR_YCrCb2BGR);
+
+    cv::imshow("src", src);
+    cv::imshow("dst", dst);
+    cv::waitKey();
+    cv::destroyAllWindows();
+    return;
+}
+
+
+// HSV 컬러영상에서 특정 색상 영역을 추출하는 마스크 영상 생성
+int lower_hue=40;
+int upper_hue=80;
+
+cv::Mat src, src_hsv, mask;
+
+void on_hue_changed(int, void*) {
+    cv::Scalar lowerb(lower_hue, 100, 0);
+    cv::Scalar upperb(upper_hue, 255, 255);
+    cv::inRange(src_hsv, lowerb, upperb, mask); // 조건 검사 후 특정값 반환
+
+    cv::imshow("mask", mask);
+}
+
+void show7() {    
+    src=cv::imread("candies.png", cv::IMREAD_COLOR);
+    if(src.empty()) {
+        std::cerr << "Image load failed!" << std::endl;
+        return;
+    }
+    cv::cvtColor(src, src_hsv, cv::COLOR_BGR2HSV);
+
+    cv::imshow("src", src);
+    cv::namedWindow("mask");
+    cv::createTrackbar("Lower Hue", "mask", &lower_hue, 179, on_hue_changed);
+    cv::createTrackbar("Upper Hue", "mask", &upper_hue, 179, on_hue_changed);
+    on_hue_changed(0, 0); //초기화 콜백 호출
+    
+    cv::waitKey();
+    cv::destroyAllWindows();    
+    
+    return;
+}
+
+// 히스토그램 역투영을 이용한 피부색 영역 검출
+void show8() {
+    cv::Mat ref, ref_ycrcb, mask;
+    ref=cv::imread("ref.png", cv::IMREAD_COLOR);
+    mask=cv::imread("mask.bmp", cv::IMREAD_GRAYSCALE);
+    cv::cvtColor(ref, ref_ycrcb, cv::COLOR_BGR2YCrCb);
+
+    cv::Mat hist;
+    int channels[]={1,2};
+    int cr_bins=128;
+    int cb_bins=128;
+    int histSize[]={cr_bins, cr_bins};
+    float cr_ranges[]={0,256};
+    float cb_ranges[]={0,256};
+    const float* ranges[]={cr_ranges, cb_ranges};
+
+    cv::calcHist(&ref_ycrcb, 1, channels, mask, hist, 2, histSize, ranges); 
+
+    // 히스토그램 역투영
+    cv::Mat src, src_ycrcb;
+    src=cv::imread("kids.png", cv::IMREAD_COLOR);
+    cv::cvtColor(src, src_ycrcb, cv::COLOR_BGR2YCrCb);
+
+    cv::Mat backproj;
+    cv::calcBackProject(&src_ycrcb, 1, channels, hist, backproj, ranges, 1, true);
+
+    cv::imshow("src", src);
+    cv::imshow("backproj", backproj);
+
+    cv::waitKey();
+    cv::destroyAllWindows();
+
+    return;
 }
