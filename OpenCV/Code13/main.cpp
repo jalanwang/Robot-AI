@@ -28,10 +28,10 @@ int main()
    //show1();     
    //show2();
    //show3();
-   show4();
+   //show4();
    //show5();
     
-   //show6();
+   show6();
    //show7();
    //show8();
    //show9();

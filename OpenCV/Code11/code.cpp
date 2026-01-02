@@ -67,3 +67,61 @@ void show2() {
 
     return;
 }
+
+// 침식과 팽창 포플로지 연산
+void show3() {
+    cv::Mat src = cv::imread("milkdrop.bmp", cv::IMREAD_GRAYSCALE);
+    if (src.empty()) {
+        std::cout << "Could not open or find the image!" << std::endl;
+        return;
+    }
+
+    cv::Mat bin;
+    cv::threshold(src, bin, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+
+    cv::Mat dst1, dst2;
+
+    erode(bin, dst1, cv::Mat());
+    dilate(bin, dst2, cv::Mat());
+
+    cv::imshow("Original Image", src); // 원본 이미지
+    cv::imshow("Binary Image", bin); // 이진화 이미지
+    cv::imshow("Eroded Image", dst1); // 침식 이미지
+    cv::imshow("Dilated Image", dst2); // 팽창 이미지
+
+    cv::waitKey(0);
+
+    cv::destroyAllWindows();
+    
+    
+    
+    return;
+}
+
+
+// 열기와 닫기 연산
+void show4() {
+    cv::Mat src = cv::imread("milkdrop.bmp", cv::IMREAD_GRAYSCALE);
+    if (src.empty()) {
+        std::cout << "Could not open or find the image!" << std::endl;
+        return;
+    }
+
+    cv::Mat bin;
+    cv::threshold(src, bin, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+
+    cv::Mat dst1, dst2;
+
+    cv::morphologyEx(bin, dst1, cv::MORPH_OPEN, cv::Mat());
+    cv::morphologyEx(bin, dst2, cv::MORPH_CLOSE, cv::Mat());
+
+    cv::imshow("Original Image", src); // 원본 이미지
+    cv::imshow("Binary Image", bin); // 이진화 이미지
+    cv::imshow("Opening Image", dst1); // 열기 이미지
+    cv::imshow("Closing Image", dst2); // 닫기 이미지
+
+    cv::waitKey(0);
+    cv::destroyAllWindows();     
+    
+    return;
+}
