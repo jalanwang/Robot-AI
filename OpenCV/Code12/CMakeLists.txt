@@ -4,6 +4,9 @@ cmake_minimum_required(VERSION 3.10)
 # 프로젝트의 이름을 'OpenCVProject'로 정의합니다.
 project(OpenCVProject)
 
+# 실행 파일이 생성될 경로를 소스 디렉토리 내 bin 폴더로 지정
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+
 # 시스템에 설치된 OpenCV 패키지를 찾습니다. REQUIRED 옵션은 찾지 못하면 구성을 중단(에러 발생)합니다.
 find_package(OpenCV REQUIRED)
 
