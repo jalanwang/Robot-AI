@@ -11,6 +11,10 @@ int main() {
     nums.emplace(5);
     nums.emplace(5);
 
+    nums.emplace(-500);
+    nums.emplace(100);
+    nums.emplace(2);
+    
     for(const int num: nums) {
         std::cout << num << std::endl;
     }    
