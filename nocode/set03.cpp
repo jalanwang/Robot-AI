@@ -26,6 +26,15 @@ public:
 // const std::string& getName() const (const 참조 반환)
 // mName 원본에 대한 읽기 전용 별명(참조)만 반환합니다.
 // 복사가 발생하지 않아 매우 빠르고 효율적입니다.
+
+// std::set 템플릿은 기본 자료형에 대한 정의는 있으나
+// Cat같은 사용자 정의 자료형에 대한 정의가 없어서 그런것 같아. 내말이 맞는지 틀리는지 철저히 확인해.
+
+    bool operator<(const Cat& other) const {
+        if (mAge != other.mAge) return mAge < other.mAge;
+        return mName < other.mName;
+    }
+
 };
 
 int main() {
@@ -35,7 +44,7 @@ int main() {
     cats.emplace(Cat(1, "cat1"));
     cats.emplace(Cat(2, "cat2"));
     
-    for(const Cat& cat: cats) {
+    for(auto & cat: cats) {
         cat.speak();
     }
     return 0;
