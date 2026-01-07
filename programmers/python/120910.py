@@ -3,8 +3,10 @@
 처음 세균의 마리수 n과 경과한 시간 t가 매개변수로 주어질 때
 t시간 후 세균의 수를 return하도록 solution 함수를 완성해주세요.'''
 def solution(n, t):
-    answer=n*2*t     
-    return solution(n,t)
+    
+    for i in range(t):
+        n=2*n
+    return(n)
 
 if __name__ == '__main__':
     print(solution(2,10))
