@@ -12,5 +12,3 @@ import numpy as np
 a=np.eye(4, dtype='float64')
 b=a*10
 print(b)
-
-
