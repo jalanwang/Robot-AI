@@ -1,11 +1,26 @@
 import numpy as np
 
 # 닥스훈트의 길이와 높이 데이터
-dach_length = [55, 57, 64, 63, 58, 49, 54, 61]
-dach_height = [30, 31, 36, 30, 33, 25, 37, 34]
+dach_length_tyny = [55, 57, 64, 63, 58, 49, 54, 61]
+dach_height_tyny = [30, 31, 36, 30, 33, 25, 37, 34]
 # 진돗개의 길이와 높이 데이터
-jin_length = [56, 47, 56, 46, 49, 53, 52, 48]
-jin_height = [52, 52, 50, 53, 50, 53, 49, 54]
+jin_length_tyny = [56, 47, 56, 46, 49, 53, 52, 48]
+jin_height_tyny = [52, 52, 50, 53, 50, 53, 49, 54]
+
+dach_length_mean = np.mean(dach_length_tyny)
+dach_height_mean = np.mean(dach_height_tyny)
+jin_length_mean = np.mean(jin_length_tyny)
+jin_height_mean = np.mean(jin_height_tyny)
+
+dach_length_std = np.std(dach_length_tyny)
+dach_height_std = np.std(dach_height_tyny)
+jin_length_std = np.std(jin_length_tyny)
+jin_height_std = np.std(jin_height_tyny)
+
+dach_length=np.random.normal(dach_length_mean,dach_length_std,200)
+dach_height=np.random.normal(dach_height_mean,dach_height_std,200)
+jin_length=np.random.normal(jin_length_mean,jin_length_std,200)
+jin_height=np.random.normal(jin_height_mean,jin_height_std,200)
 
 d_data = np.column_stack((dach_length, dach_height))
 d_label = np.zeros(len(d_data))   # 닥스훈트는 0으로 레이블링
@@ -17,50 +32,13 @@ j_label = np.ones(len(j_data))   # 진돗개는 1로 레이블링
 #print(d_label)
 #print(j_data)
 #print(j_label)
-'''
-[[55 30]
- [57 31]
- [64 36]
- [63 30]
- [58 33]
- [49 25]
- [54 37]
- [61 34]]
-[0. 0. 0. 0. 0. 0. 0. 0.]
-[[56 52]
- [47 52]
- [56 50]
- [46 53]
- [49 50]
- [53 53]
- [52 49]
- [48 54]]
-[1. 1. 1. 1. 1. 1. 1. 1.]
-'''
+
 dogs = np.concatenate((d_data, j_data))
 labels = np.concatenate((d_label, j_label))
 dog_classes = {0:'닥스훈트', 1:'진돗개'}
 #print(dogs)
 #print(labels)
-'''
-[[55 30]
- [57 31]
- [64 36]
- [63 30]
- [58 33]
- [49 25]
- [54 37]
- [61 34]
- [56 52]
- [47 52]
- [56 50]
- [46 53]
- [49 50]
- [53 53]
- [52 49]
- [48 54]]
-[0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
-'''
+
 from sklearn.neighbors import KNeighborsClassifier
 k=3
 knn=KNeighborsClassifier(n_neighbors=k)
@@ -100,5 +78,5 @@ for i in near_idx:
 # 새 데이터의 표식은 삼각형(triangle)으로 설정하고, 레이블은 new Data로
 plt.scatter(newdata[0][0], newdata[0][1], s=100, marker='^', c='g', label='new Data')
 
-plt.savefig('quiz1.png')
-print("그래프가 'quiz1.png' 파일로 저장되었습니다.")
+plt.savefig('quiz2.png')
+print("그래프가 'quiz2.png' 파일로 저장되었습니다.")
