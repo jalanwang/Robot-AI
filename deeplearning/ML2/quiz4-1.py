@@ -10,9 +10,9 @@ def generate_dog_data(initial_lengths, initial_heights, label, num_samples=200):
     length_std = np.std(initial_lengths)
     height_std = np.std(initial_heights)
 
-    # 정규분포를 이용해 새로운 데이터 생성
-    new_lengths = np.random.normal(length_mean, length_std, num_samples)
-    new_heights = np.random.normal(height_mean, height_std, num_samples)
+    # 정규분포를 이용해 새로운 데이터 생성(표준편차를 3배로 늘려서 에러를 넣어 줌)
+    new_lengths = np.random.normal(length_mean, 3*length_std, num_samples)
+    new_heights = np.random.normal(height_mean, 3*height_std, num_samples)
 
     # 데이터와 레이블 생성
     data = np.column_stack((new_lengths, new_heights))
@@ -79,5 +79,5 @@ plt.ylabel('Height')
 plt.title("Dog size")
 plt.legend(loc='upper right')
 
-plt.savefig('quiz4.png')
-print("그래프가 'quiz4.png' 파일로 저장되었습니다.")
+plt.savefig('quiz4-1.png')
+print("그래프가 'quiz4-1.png' 파일로 저장되었습니다.")

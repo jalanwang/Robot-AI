@@ -1,5 +1,10 @@
 import numpy as np
 
+def prepare_data(length, height, label):
+    data = np.column_stack((length, height))
+    labels = np.full(len(data), label)
+    return data, labels
+
 # 닥스훈트의 길이와 높이 데이터
 dach_length = [55, 57, 64, 63, 58, 49, 54, 61]
 dach_height = [30, 31, 36, 30, 33, 25, 37, 34]
@@ -7,11 +12,8 @@ dach_height = [30, 31, 36, 30, 33, 25, 37, 34]
 jin_length = [56, 47, 56, 46, 49, 53, 52, 48]
 jin_height = [52, 52, 50, 53, 50, 53, 49, 54]
 
-d_data = np.column_stack((dach_length, dach_height))
-d_label = np.zeros(len(d_data))   # 닥스훈트는 0으로 레이블링
-
-j_data = np.column_stack((jin_length, jin_height))
-j_label = np.ones(len(j_data))   # 진돗개는 1로 레이블링
+d_data, d_label = prepare_data(dach_length, dach_height, 0)   # 닥스훈트는 0으로 레이블링
+j_data, j_label = prepare_data(jin_length, jin_height, 1)   # 진돗개는 1로 레이블링
 
 #print(d_data)
 #print(d_label)
@@ -26,7 +28,7 @@ j_label = np.ones(len(j_data))   # 진돗개는 1로 레이블링
  [49 25]
  [54 37]
  [61 34]]
-[0. 0. 0. 0. 0. 0. 0. 0.]
+[0 0 0 0 0 0 0 0]
 [[56 52]
  [47 52]
  [56 50]
@@ -35,13 +37,14 @@ j_label = np.ones(len(j_data))   # 진돗개는 1로 레이블링
  [53 53]
  [52 49]
  [48 54]]
-[1. 1. 1. 1. 1. 1. 1. 1.]
+ [1 1 1 1 1 1 1 1]
 '''
+# 닥스훈트와 진돗개 데이터를 합쳐 전체 데이터셋 생성
 dogs = np.concatenate((d_data, j_data))
 labels = np.concatenate((d_label, j_label))
 dog_classes = {0:'닥스훈트', 1:'진돗개'}
 #print(dogs)
-#print(labels)
+print(labels)
 '''
 [[55 30]
  [57 31]
@@ -59,22 +62,26 @@ dog_classes = {0:'닥스훈트', 1:'진돗개'}
  [53 53]
  [52 49]
  [48 54]]
-[0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1. 1. 1. 1.]
+[0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1]
 '''
 from sklearn.neighbors import KNeighborsClassifier
-k=3
-knn=KNeighborsClassifier(n_neighbors=k)
-knn.fit(dogs, labels)
+k=3 # 인접 데이터의 개수
+knn=KNeighborsClassifier(n_neighbors=k) #k-NN 분류기 생성
+knn.fit(dogs, labels) # 모델 학습
 
-#숙제1
-#가까운 이웃을 시각화하자
-newdata = [[59, 35]]
-y_pred = knn.predict(newdata)
-print('데이터', newdata, ', 판정 결과:', dog_classes[y_pred[0]])
+'''숙제1
+가까운 이웃을 시각화하자
+'''
+
+newdata = [[59, 35]] # 새 데이터
+y_pred = knn.predict(newdata) # 새 데이터에 대한 분류 예측
+print('데이터', newdata, ', 판정 결과:', dog_classes[y_pred[0]]) #새 데이터와 판정 결과 출력
+
 '''위 코드의 결과를 바탕으로 다음과 같이 [[59, 35]]에 대한
 분류 결과를 시작적으로 나타내도록 하지. 초록색의 세모 점이
 이 데이터이며 이 데이터와 이웃한 세 개의 데이터를 주황색으로 
 나타내도록 하자'''
+
 import matplotlib.pyplot as plt
 
 plt.scatter(dach_length, dach_height, c='r', label='Dachshund')
@@ -95,10 +102,10 @@ near_idx = np.argsort(distance_square)[:k]
 
 # 가까운 이웃들을 주황색으로 표시
 for i in near_idx:
-    plt.scatter(dogs[i][0], dogs[i][1], s=200, c='orange', marker='*')
+    plt.scatter(dogs[i][0], dogs[i][1], s=200, c='orange', marker='*') # 가까운 이웃의 표식은 별(star)로 설정하고, 색깔은 주황색으로
 
 # 새 데이터의 표식은 삼각형(triangle)으로 설정하고, 레이블은 new Data로
-plt.scatter(newdata[0][0], newdata[0][1], s=100, marker='^', c='g', label='new Data')
+plt.scatter(newdata[0][0], newdata[0][1], s=100, marker='^', c='g', label='new Data') # 초록색
 
 plt.savefig('quiz1.png')
 print("그래프가 'quiz1.png' 파일로 저장되었습니다.")
