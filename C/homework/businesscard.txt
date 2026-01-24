@@ -1,0 +1,2 @@
+홍길동|010-1111-2222|ABC Corp.|hong@example.com|
+이순신|010-3333-4444|K-Ship|lee@ship.com|추가 정보가 있습니다.
