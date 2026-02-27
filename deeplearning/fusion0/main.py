@@ -33,7 +33,3 @@ data_reader.draw_graph(history)
 # 모델 저장
 model.save("model.keras")
 
-# 테스트 케이스
-tp_test = (100, 100, 100)
-result = model.predict(tp_test)
-print(result)
