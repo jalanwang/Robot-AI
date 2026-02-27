@@ -1,0 +1,77 @@
+#SingleInstance Force
+#NoTrayIcon
+; ------------------------------------------------------------
+; Total Commander Parameters:
+;   "C:\Tools\vscode_remote_ctrlf4_min.ahk" "%P%N" "%P"
+; - Arg1: "%P%N" (파일 선택 시 전체 경로, 아니면 폴더일 수도)
+; - Arg2: "%P"   (폴더 fallback)
+; - 동작:
+;   · \\wsl.localhost\<Distro>\...  → Code.exe --remote wsl+<Distro> "<WSL경로>"
+;   · /home,/mnt/...                → Code.exe --remote wsl+Ubuntu "<WSL경로>"
+;   · 그 외(C:\..., \\server\...)   → Code.exe "<경로>"
+; ------------------------------------------------------------
+
+WinCodePath   := EnvGet("LOCALAPPDATA") . "\Programs\Microsoft VS Code\Code.exe"
+DefaultDistro := "Ubuntu"
+
+; ---------- 인자 ----------
+arg1 := A_Args.Length >= 1 ? Trim(A_Args[1], '"') : ""
+arg2 := A_Args.Length >= 2 ? Trim(A_Args[2], '"') : ""
+; Arg1이 비었거나 ...\%N 로 끝나면 Arg2로 대체
+badTail := RegExMatch(arg1, '[/\\]%N$', &_)
+full    := (arg1 = "" || badTail) ? arg2 : arg1
+if (full = "")
+{
+    dq := Chr(34)
+    MsgBox("인자 없음. TC 파라미터를 " . dq . "%P%N" . dq . " " . dq . "%P" . dq . " 로 설정해줘.")
+    Return
+}
+
+; ---------- 유틸 ----------
+; UNC: \\wsl.localhost\<Distro>\sub\path → (distro, /sub/path)
+IfUncWsl(path, &distro, &wslPath) {
+    if RegExMatch(path, '^\\\\wsl\.localhost\\([^\\]+)\\(.+)$', &m) {
+        distro  := m[1]
+        p := StrReplace(m[2], '\', '/')
+        if (SubStr(p, 1, 1) != "/")
+            p := "/" . p
+        wslPath := p
+        return true
+    }
+    return false
+}
+; 리눅스 절대경로? (/ 로 시작, 드라이브콜론 없음)
+IfLinuxAbs(path) {
+    return RegExMatch(path, '^/[^:\s]')
+}
+; Windows에서 Code 실행 (항상 재사용 창)
+OpenWin(target) {
+    global WinCodePath
+    if FileExist(WinCodePath)
+        Run('"' . WinCodePath . '" --reuse-window "' . target . '"', "C:\")
+    else
+        Run('cmd.exe /c code --reuse-window "' . target . '"', "C:\")
+}
+; 로컬 Code.exe가 원격 WSL로 열기 (공백 안전: 전체를 큰따옴표로)
+OpenRemote(distro, wslPath) {
+    global WinCodePath
+    cmd := '"' . WinCodePath . '" --reuse-window --remote wsl+' . distro . ' "' . wslPath . '"'
+    if FileExist(WinCodePath)
+        Run(cmd, "C:\")
+    else
+        Run('cmd.exe /c ' . cmd, "C:\")
+}
+
+; ---------- 메인 ----------
+d := "", w := ""
+if (IfUncWsl(full, &d, &w)) {
+    OpenRemote(d, w)
+} else if (IfLinuxAbs(full)) {
+    OpenRemote(DefaultDistro, full)
+} else {
+    OpenWin(full)
+}
+
+; 너무 빨리 끝났다고 느끼지 않게 살짝 대기 후 종료
+Sleep 300
+Return
