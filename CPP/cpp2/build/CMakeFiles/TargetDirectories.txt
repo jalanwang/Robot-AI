@@ -1,3 +1,0 @@
-/home/robot/work/CPP/cpp2/build/CMakeFiles/calculator_app.dir
-/home/robot/work/CPP/cpp2/build/CMakeFiles/edit_cache.dir
-/home/robot/work/CPP/cpp2/build/CMakeFiles/rebuild_cache.dir
