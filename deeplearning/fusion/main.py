@@ -27,9 +27,11 @@ history = model.fit(dr.train_X, dr.train_Y, epochs=EPOCHS,
                     validation_data=(dr.test_X, dr.test_Y),
                     callbacks=[early_stop])
 
-dtype(history)
 # 학습 결과를 그래프로 출력합니다.
 data_reader.draw_graph(history)
+
+# 모델 저장
+model.save("model.keras")
 
 # 테스트 케이스
 tp_test = (100, 100, 100)
