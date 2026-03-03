@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 # 데이터를 떠먹여 줄 클래스를 제작합니다.
 class DataReader():
     def __init__(self):
-        self.label = ["paper", "rock", "scissors"]
+        self.label = ["horse", "human"]
 
         self.train_X = []
         self.train_Y = []

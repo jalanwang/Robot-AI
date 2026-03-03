@@ -4,7 +4,7 @@ from tensorflow import keras
 import os
 
 # 학습된 모델 로드
-model = keras.models.load_model("horse_human_model.h5")
+model = keras.models.load_model("model.keras")
 
 # 클래스 이름 (DataReader와 동일하게)
 labels = ["horse", "human"]
