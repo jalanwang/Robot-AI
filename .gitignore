@@ -46,6 +46,7 @@ __pycache__/
 venv/
 ENV/
 .venv_mp/
+.env_ai/
 
 # ------------------------------------------------
 # Data & Logs (Whitelist 방식 권장)
