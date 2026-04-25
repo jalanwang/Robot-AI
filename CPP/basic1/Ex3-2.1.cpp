@@ -1,26 +1,30 @@
 #include <iostream>
-#include <string>
 
 class Rect {
+    private:
+        int m_width;
+        int m_height;
     public:
-        int width;
-        int height;
-        
-        int area(int _width, int _height) { 
-            return _width * _height;
+        Rect() : m_width(1), m_height(1) {};
+
+        int Area() {
+            return m_width * m_height;
         }
-};
+        void setWidth(int width) {
+            m_width = width;
+        }
+        void setHeight(int height) {
+            m_height = height;
+        }
+    };
 
 int main() {
     Rect r1;
-    int a;
-    int b;
-
-    std::cout << "가로 세로 입력: ";
-    std::cin >> a >> b;
-    std::cout << r1.area(a,b) << std::endl;
-
-
-    return 0;
+    int width, height;
+    
+    std::cin >> width >> height;
+    r1.setWidth(width);
+    r1.setHeight(height);
+    
+    std::cout << r1.Area() << std::endl;
 }
-
