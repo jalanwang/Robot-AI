@@ -5,11 +5,13 @@ int main()
 {
 using namespace std;
     int* p;
-
     p=new int;
+    //int*p = new int;
+
     cout << "p: " << p <<endl;
     cout << "*p: " << *p <<endl;
-    *p=5; //stack에 있는 정수형 상수
+
+    *p=5; //heap에 있는 정수형 상수
     cout << "*p: " << *p <<endl;
 
     int n;
