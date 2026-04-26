@@ -77,11 +77,23 @@ class Professor : public Researcher {
 };
 
 int main() {
-    
-    // Student st;
-    // StudentWorker stw;
+    std::cout << "--- Professor 객체 생성 ---" << std::endl;
+    {
+        Professor p;
+        p.Speaking();     // Person에서 상속
+        p.Researching();  // Researcher에서 상속
+        p.Teaching();     // Professor 자신의 메소드
+    }
+    std::cout << "--- Professor 객체 소멸 완료 ---\n" << std::endl;
 
-
+    std::cout << "--- StudentWorker 객체 생성 ---" << std::endl;
+    {
+        StudentWorker sw;
+        sw.Eating();      // Person에서 상속
+        sw.Studying();    // Student에서 상속
+        sw.Working();     // StudentWorker 자신의 메소드
+    }
+    std::cout << "--- StudentWorker 객체 소멸 완료 ---" << std::endl;
 
     return 0;
 }
